@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Decoder — Translate Any Restaurant Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #4a4a5a;
+    --ink-muted: #8a8a9a;
+    --gold: #c9a84c;
+    --gold-light: #e8d9a0;
+    --cream: #faf8f4;
+    --white: #ffffff;
+    --blue: #3b5998;
+    --blue-dark: #2c4373;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 50%, #4a6bb5 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 1.5rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+  .hero-emoji { font-size: 3rem; margin-bottom: 1rem; }
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  .hero .tagline {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  .hero .version-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── MENU CARDS ── */
+  .section { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .section-sub {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .menu-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .menu-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .card-flag { font-size: 2rem; }
+  .card-info { flex: 1; }
+  .card-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--blue-dark);
+  }
+  .card-location {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.03em;
+  }
+  .card-meta {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .card-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--ink-light);
+    background: var(--cream);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+  }
+  .card-arrow {
+    font-size: 1.2rem;
+    color: var(--gold);
+    align-self: center;
+  }
+
+  /* ── FEATURES ── */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+  .feature {
+    background: white;
+    border-radius: var(--radius);
+    padding: 1.3rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .feature-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .feature-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  .feature-desc {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+
+  /* ── ROADMAP ── */
+  .roadmap-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  .roadmap-item:last-child { border-bottom: none; }
+  .roadmap-status {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .status-done { background: #e8f5e9; }
+  .status-wip { background: #fff8e1; }
+  .status-planned { background: #f3f4f6; }
+  .roadmap-text { flex: 1; }
+  .roadmap-title { font-size: 0.9rem; font-weight: 600; }
+  .roadmap-desc { font-size: 0.78rem; color: var(--ink-muted); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--blue-dark);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+  }
+  .footer a { color: var(--gold-light); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 3rem 1rem 2.5rem; }
+    .section { padding: 2rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-emoji">🍽️</div>
+    <div class="version-badge">Alpha &middot; v0.1</div>
+    <h1>Menu Decoder</h1>
+    <p class="tagline">Instantly understand any restaurant menu in any language. Ingredient icons, English translations, cultural context &mdash; and share your order via iMessage or email.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Decoded Menus</div>
+  <div class="section-sub">Tap a menu to explore it with translations, ingredient icons, and one-tap sharing.</div>
+
+  <a class="menu-card" href="menus/cipolla-doro.html">
+    <div class="card-header">
+      <div class="card-flag">🇮🇹</div>
+      <div class="card-info">
+        <div class="card-name">La Cipolla d'Oro</div>
+        <div class="card-location">Ancona, Le Marche, Italy</div>
+      </div>
+      <div class="card-arrow">&rarr;</div>
+    </div>
+    <div class="card-meta">
+      <span class="card-tag">21 sections</span>
+      <span class="card-tag">100+ dishes</span>
+      <span class="card-tag">Italian &rarr; English</span>
+      <span class="card-tag">Ingredient icons</span>
+      <span class="card-tag">Order sharing</span>
+    </div>
+  </a>
+
+  <div class="menu-card" style="opacity:0.5; cursor:default; border: 2px dashed #ddd; box-shadow:none; text-align:center; padding:2rem;">
+    <div style="font-size:1.5rem; margin-bottom:0.5rem;">📸</div>
+    <div style="font-weight:600; font-size:0.9rem; color:var(--ink-light);">Add a menu</div>
+    <div style="font-size:0.78rem; color:var(--ink-muted);">Snap a photo or paste a link &mdash; coming soon</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">How It Works</div>
+  <div class="section-sub">From photo to shareable translated menu in seconds.</div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">📷</div>
+      <div class="feature-title">Capture</div>
+      <div class="feature-desc">Snap a photo of a menu, paste a URL, or upload an image. We handle paper menus, PDFs, and digital menu sites.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🌍</div>
+      <div class="feature-title">Translate</div>
+      <div class="feature-desc">AI translates every dish with cultural context &mdash; not just words, but what to actually expect on the plate.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🐟🧀🌿</div>
+      <div class="feature-title">Decode</div>
+      <div class="feature-desc">Emoji ingredient icons let you spot fish, meat, dairy, truffle, and vegetarian dishes at a glance.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💬</div>
+      <div class="feature-title">Share</div>
+      <div class="feature-desc">Tap dishes to build your order, then send it via iMessage, email, or copy &mdash; perfect for the table.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Roadmap</div>
+  <div class="section-sub">Where we're headed.</div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-status status-done">&#10003;</div>
+    <div class="roadmap-text">
+      <div class="roadmap-title">Static menu decode + share</div>
+      <div class="roadmap-desc">Full menu translation with emoji ingredient icons and iMessage/Mail sharing. Live now.</div>
+    </div>
+  </div>
+  <div class="roadmap-item">
+    <div class="roadmap-status status-wip">&#9998;</div>
+    <div class="roadmap-text">
+      <div class="roadmap-title">GitHub Pages hosting</div>
+      <div class="roadmap-desc">Live web app accessible from any phone at the table.</div>
+    </div>
+  </div>
+  <div class="roadmap-item">
+    <div class="roadmap-status status-planned">&#8226;</div>
+    <div class="roadmap-text">
+      <div class="roadmap-title">URL-based menu ingestion</div>
+      <div class="roadmap-desc">Paste a leggimenu.it, thefork, or any digital menu URL and get an instant decode.</div>
+    </div>
+  </div>
+  <div class="roadmap-item">
+    <div class="roadmap-status status-planned">&#8226;</div>
+    <div class="roadmap-text">
+      <div class="roadmap-title">Photo-to-menu (OCR + AI)</div>
+      <div class="roadmap-desc">Snap a photo of a paper menu. OCR extracts the text, AI translates and annotates.</div>
+    </div>
+  </div>
+  <div class="roadmap-item">
+    <div class="roadmap-status status-planned">&#8226;</div>
+    <div class="roadmap-text">
+      <div class="roadmap-title">Dietary filter overlay</div>
+      <div class="roadmap-desc">Toggle filters for gluten-free, vegetarian, nut-free, etc. Matching dishes highlight instantly.</div>
+    </div>
+  </div>
+  <div class="roadmap-item">
+    <div class="roadmap-status status-planned">&#8226;</div>
+    <div class="roadmap-text">
+      <div class="roadmap-title">iOS app (Swift)</div>
+      <div class="roadmap-desc">Native camera integration, offline caching, Apple Wallet pass for saved menus.</div>
+    </div>
+  </div>
+  <div class="roadmap-item">
+    <div class="roadmap-status status-planned">&#8226;</div>
+    <div class="roadmap-text">
+      <div class="roadmap-title">Multi-language support</div>
+      <div class="roadmap-desc">French, Japanese, Thai, Spanish, Greek &mdash; any menu language to any reader language.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  Menu Decoder &middot; Built by <a href="https://github.com/Aguidice">Alex Guidice</a><br>
+  Open source &middot; Contributions welcome
+</div>
+
+</body>
+</html>
