@@ -412,13 +412,185 @@
     .menu-item, .wine-item, .drink-item { padding-left: 1.8rem !important; }
   }
 
+
+  /* ── TAB SYSTEM ── */
+  .tab-bar {
+    background: var(--blue-dark);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .tab-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.45);
+    background: transparent;
+    border: none;
+    padding: 0.85rem 1.8rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .tab-btn:hover {
+    color: rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.04);
+  }
+  .tab-btn.active {
+    color: white;
+    border-bottom-color: var(--gold);
+    background: rgba(255,255,255,0.06);
+  }
+  .tab-btn .tab-icon {
+    font-size: 0.9rem;
+  }
+  .tab-btn .tab-label {
+    font-size: 0.65rem;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-left: 0.2rem;
+  }
+  .tab-content {
+    display: none;
+  }
+  .tab-content.active {
+    display: block;
+  }
+
+  /* ── ABOUT SECTION ── */
+  .about-section {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  .about-divider {
+    width: 80px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 2rem;
+  }
+  .about-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blue-dark);
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  .about-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .about-text {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.85;
+  }
+  .about-text p {
+    margin-bottom: 1.2rem;
+  }
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+  .about-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .about-detail-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .about-detail-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  .about-detail-label {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.1rem;
+  }
+
+  /* ── FOUNDATION MODEL PLACEHOLDER ── */
+  .fm-placeholder {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  .fm-pulse {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding: 1.5rem 2rem;
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    animation: fmPulse 2.5s ease-in-out infinite;
+  }
+  @keyframes fmPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  .fm-schema-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    opacity: 0.6;
+  }
+
+  /* Adjust nav stickiness when inside tabs */
+  .tab-content .nav {
+    top: 42px; /* below the tab bar */
+  }
+
+  @media (max-width: 600px) {
+    .tab-btn {
+      font-size: 0.7rem;
+      padding: 0.7rem 1.2rem 0.6rem;
+    }
+    .tab-btn .tab-label {
+      display: none;
+    }
+    .about-section {
+      padding: 2rem 1rem;
+    }
+  }
 </style>
-</head>
 <body>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- HEADER                                      -->
-<!-- ═══════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- Menu Decoder: Tabbed Comparison Architecture            -->
+<!--                                                         -->
+<!-- Tab 1 (Claude): Full decoded menu by Claude Opus 4      -->
+<!-- Tab 2 (Foundation): Template for Apple Intelligence     -->
+<!--                                                         -->
+<!-- The Foundation Model tab uses data-section attributes   -->
+<!-- for programmatic population from iOS/macOS app.          -->
+<!-- See window.MenuDecoderSchema for the data contract.     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
 <div class="header">
   <div class="header-content">
     <div class="restaurant-sub">Ristorante &amp; B&amp;B &middot; Ancona, Le Marche</div>
@@ -428,9 +600,27 @@
   </div>
 </div>
 
+
 <!-- ═══════════════════════════════════════════ -->
-<!-- STICKY NAV                                  -->
+<!-- TAB BAR                                     -->
 <!-- ═══════════════════════════════════════════ -->
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('claude')" id="tab-claude">
+    <span class="tab-icon">&#10024;</span>
+    Claude Decoded
+    <span class="tab-label">Claude Opus 4</span>
+  </button>
+  <button class="tab-btn" onclick="switchTab('foundation')" id="tab-foundation">
+    <span class="tab-icon">&#63743;</span>
+    Foundation Model
+    <span class="tab-label">Apple Intelligence</span>
+  </button>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TAB 1: CLAUDE DECODED                       -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="tab-content active" id="content-claude">
 <nav class="nav">
   <a href="#antipasti">Antipasti</a>
   <a href="#cresce">Cresce</a>
@@ -2334,16 +2524,60 @@
   <em>"Great and small occasions alike always deserve the same dedication."</em>
 </div>
 
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- ABOUT THE RESTAURANT (Claude)               -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="about-section">
+  <div class="about-divider"></div>
+  <div class="about-title">About La Cipolla d'Oro</div>
+  <div class="about-subtitle">Researched by Claude Opus 4</div>
+  
+  <div class="about-text">
+    <p>La Cipolla d'Oro &mdash; "The Golden Onion" &mdash; is a restaurant, wine bar, and country house B&amp;B set in a beautifully restored 19th-century farmhouse (<em>casa colonica</em>) in Potenza Picena, Le Marche. Nestled in the countryside between Ancona and the coast near Monte Conero, it's surrounded by centuries-old cypress trees, fruit orchards, and olive groves, with a peaceful garden terrace for summer dining.</p>
+    
+    <p>Their culinary philosophy centers on heartfelt, authentic <em>Cucina Marchigiana</em> &mdash; regional recipes that celebrate the scents, flavors, and colors of Le Marche. The kitchen is known for spectacular wood-fired grilled meats, traditional pastas like gnocchi with duck rag&ugrave; and pappardelle with wild boar, and regional specialties including <em>ciauscolo</em>, a spreadable PGI salame unique to the area.</p>
+    
+    <p>Le Marche cuisine traces its roots to <em>cucina povera</em> &mdash; a waste-nothing philosophy built on seasonal, local ingredients. The region is celebrated for its truffles, premium olive oil (especially Cartoceto DOP), and the intersection of mountain and coastal flavors.</p>
+    
+    <p>The restaurant also serves wood-fired pizzas and offers a dedicated gluten-free menu. Their wine list features selections from the Marche's excellent but underappreciated vineyards.</p>
+  </div>
+
+  <div class="about-detail">
+    <div class="about-detail-icon">&#127968;</div>
+    <div class="about-detail-text">
+      <div class="about-detail-label">Country House</div>
+      16 rooms &mdash; eight in the restored farmhouse with vintage character, eight modern rooms with private gardens
+    </div>
+  </div>
+  <div class="about-detail">
+    <div class="about-detail-icon">&#11088;</div>
+    <div class="about-detail-text">
+      <div class="about-detail-label">Reviews</div>
+      #4 of 21 restaurants in Potenza Picena &middot; 692 reviews on TripAdvisor &middot; &euro;25&ndash;35 per person
+    </div>
+  </div>
+  <div class="about-detail">
+    <div class="about-detail-icon">&#127860;</div>
+    <div class="about-detail-text">
+      <div class="about-detail-label">Signature</div>
+      Wood-fired grill &middot; Handmade pasta &middot; Ciauscolo &middot; Regional wines &middot; Gluten-free menu
+    </div>
+  </div>
+  <div class="about-detail">
+    <div class="about-detail-icon">&#128205;</div>
+    <div class="about-detail-text">
+      <div class="about-detail-label">Location</div>
+      Contrada San Girio, 33, 62018 Potenza Picena (MC), Le Marche, Italy
+    </div>
+  </div>
+</div>
+
 <div class="footer">
   La Cipolla d'Oro &middot; Ancona, Le Marche &middot; <a href="https://www.leggimenu.it/menu/cipolladoro">View original menu</a><br>
   English descriptions for reference &mdash; ask your server about today's specials and seasonal availability<br>
   4.7 out of 5 &mdash; 66 reviews
 </div>
-
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- SHARE BAR                                   -->
-<!-- ═══════════════════════════════════════════ -->
 <div class="share-bar" id="shareBar">
   <div class="count"><strong id="selCount">0</strong> items selected</div>
   <button class="share-btn share-btn-copy" onclick="copyOrder()">
@@ -2359,6 +2593,431 @@
 </div>
 <div class="copied-toast" id="toast">Copied!</div>
 
+</div> <!-- end content-claude -->
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TAB 2: FOUNDATION MODEL                     -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="tab-content" id="content-foundation">
+
+<!-- Foundation Model Data Schema:
+{
+  "restaurant": {
+    "name_it": "La Cipolla d'Oro",
+    "name_en": "The Golden Onion",
+    "location": "Potenza Picena, Le Marche, Italy",
+    "type": "Ristorante & B&B"
+  },
+  "sections": [
+    {
+      "id": "antipasti",
+      "name_it": "Antipasti",
+      "name_en": "Starters",
+      "intro": "...",
+      "items": [
+        {
+          "name_it": "Degustazione di Salumi e Formaggi",
+          "name_en": "TASTING BOARD OF CURED MEATS & CHEESES",
+          "price": "€13",
+          "description": "A sharing platter of locally produced salumi...",
+          "ingredients": ["cured", "cheese"],
+          "tags": ["shareable"],
+          "cultural_context": "Ciauscolo is a PGI salame unique to Le Marche..."
+        }
+      ]
+    }
+  ],
+  "about": {
+    "history": "...",
+    "philosophy": "...",
+    "specialties": ["..."],
+    "location_details": "...",
+    "reviews": { "source": "TripAdvisor", "rating": 4.0, "count": 692 }
+  }
+}
+-->
+
+<nav class="nav">
+  <a href="#fm-antipasti">Antipasti</a>
+  <a href="#fm-cresce">Crescia</a>
+  <a href="#fm-primi">Primi</a>
+  <a href="#fm-forno">Dal Forno</a>
+  <a href="#fm-fritti">Fritti</a>
+  <a href="#fm-padella">In Padella</a>
+  <a href="#fm-brace">Alla Brace</a>
+  <a href="#fm-tagliate">Tagliate</a>
+  <a href="#fm-contorni">Contorni</a>
+  <a href="#fm-pizze-bianche">Pizze Bianche</a>
+  <a href="#fm-pizze-rosse">Pizze Rosse</a>
+  <a href="#fm-dessert">Dessert</a>
+  <a href="#fm-bollicine">Bollicine</a>
+  <a href="#fm-champagne">Champagne</a>
+  <a href="#fm-bianchi">Vini Bianchi</a>
+  <a href="#fm-rossi">Vini Rossi</a>
+  <a href="#fm-rosati">Ros&eacute;</a>
+  <a href="#fm-dolci-vini">Vini Dolci</a>
+  <a href="#fm-birre">Birre Artigianali</a>
+  <a href="#fm-bevande">Bevande</a>
+  <a href="#fm-caffe">Caff&egrave; &amp; Digestivi</a>
+</nav>
+
+<div class="legend-bar">
+  <div class="legend-title">Ingredient Key &mdash; Tap to Learn</div>
+  <div class="legend-item"><span class="dot dot-beef"></span> Beef</div>
+  <div class="legend-item"><span class="dot dot-pork"></span> Pork</div>
+  <div class="legend-item"><span class="dot dot-lamb"></span> Lamb</div>
+  <div class="legend-item"><span class="dot dot-poultry"></span> Poultry / Duck</div>
+  <div class="legend-item"><span class="dot dot-game"></span> Game</div>
+  <div class="legend-item"><span class="dot dot-fish"></span> Fish</div>
+  <div class="legend-item"><span class="dot dot-shellfish"></span> Shellfish</div>
+  <div class="legend-item"><span class="dot dot-cheese"></span> Cheese / Dairy</div>
+  <div class="legend-item"><span class="dot dot-cured"></span> Cured Meats</div>
+  <div class="legend-item"><span class="dot dot-truffle"></span> Truffle</div>
+  <div class="legend-item"><span class="dot dot-veg"></span> Vegetarian</div>
+</div>
+
+<div style="text-align:center;padding:0.8rem 1.5rem;border-bottom:1px solid var(--border);font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--text-muted);">
+  &#128073; Tap any dish to add it to your order &mdash; then share via iMessage or Mail
+</div>
+
+<div id="fm-antipasti" data-section="antipasti">
+  <div class="section-header">
+    <h2>Antipasti</h2>
+    <div class="section-en">Starters</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="antipasti" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-cresce" data-section="cresce">
+  <div class="section-header">
+    <h2>Crescia</h2>
+    <div class="section-en">Flatbreads</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="cresce" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-primi" data-section="primi">
+  <div class="section-header">
+    <h2>Primi</h2>
+    <div class="section-en">First Courses / Pasta</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="primi" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-forno" data-section="forno">
+  <div class="section-header">
+    <h2>Dal Forno</h2>
+    <div class="section-en">From the Oven</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="forno" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-fritti" data-section="fritti">
+  <div class="section-header">
+    <h2>Fritti</h2>
+    <div class="section-en">Fried</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="fritti" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-padella" data-section="padella">
+  <div class="section-header">
+    <h2>In Padella</h2>
+    <div class="section-en">Pan-Cooked</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="padella" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-brace" data-section="brace">
+  <div class="section-header">
+    <h2>Alla Brace</h2>
+    <div class="section-en">From the Grill</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="brace" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-tagliate" data-section="tagliate">
+  <div class="section-header">
+    <h2>Tagliate</h2>
+    <div class="section-en">Sliced Steaks</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="tagliate" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-contorni" data-section="contorni">
+  <div class="section-header">
+    <h2>Contorni</h2>
+    <div class="section-en">Side Dishes</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="contorni" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-pizze-bianche" data-section="pizze-bianche">
+  <div class="section-header">
+    <h2>Pizze Bianche</h2>
+    <div class="section-en">White Pizzas</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="pizze-bianche" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-pizze-rosse" data-section="pizze-rosse">
+  <div class="section-header">
+    <h2>Pizze Rosse</h2>
+    <div class="section-en">Red Pizzas</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="pizze-rosse" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-dessert" data-section="dessert">
+  <div class="section-header">
+    <h2>Dessert</h2>
+    <div class="section-en">Desserts</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="dessert" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-bollicine" data-section="bollicine">
+  <div class="section-header">
+    <h2>Bollicine</h2>
+    <div class="section-en">Bubbles</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="bollicine" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-champagne" data-section="champagne">
+  <div class="section-header">
+    <h2>Champagne</h2>
+    <div class="section-en">Champagne</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="champagne" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-bianchi" data-section="bianchi">
+  <div class="section-header">
+    <h2>Vini Bianchi</h2>
+    <div class="section-en">White Wines</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="bianchi" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-rossi" data-section="rossi">
+  <div class="section-header">
+    <h2>Vini Rossi</h2>
+    <div class="section-en">Red Wines</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="rossi" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-rosati" data-section="rosati">
+  <div class="section-header">
+    <h2>Ros&eacute;</h2>
+    <div class="section-en">Ros&eacute; Wines</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="rosati" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-dolci-vini" data-section="dolci-vini">
+  <div class="section-header">
+    <h2>Vini Dolci</h2>
+    <div class="section-en">Sweet Wines</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="dolci-vini" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-birre" data-section="birre">
+  <div class="section-header">
+    <h2>Birre Artigianali</h2>
+    <div class="section-en">Craft Beers</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="birre" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-bevande" data-section="bevande">
+  <div class="section-header">
+    <h2>Bevande</h2>
+    <div class="section-en">Drinks</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="bevande" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+<div id="fm-caffe" data-section="caffe">
+  <div class="section-header">
+    <h2>Caff&egrave; &amp; Digestivi</h2>
+    <div class="section-en">Coffee &amp; After-Dinner</div>
+  </div>
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence decode&hellip;</div>
+    <div class="fm-schema-note">data-section="caffe" &middot; Items will populate here from Foundation Model</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- ABOUT THE RESTAURANT (Foundation Model)     -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="about-section">
+  <div class="about-divider"></div>
+  <div class="about-title">About La Cipolla d'Oro</div>
+  <div class="about-subtitle">Researched by Apple Intelligence Foundation Model</div>
+  
+  <div class="fm-placeholder">
+    <div class="fm-pulse">&#128260; Awaiting Apple Intelligence research&hellip;</div>
+    <div class="fm-schema-note">Restaurant history, philosophy, and details will populate here</div>
+  </div>
+</div>
+
+<div class="footer">
+  La Cipolla d'Oro &middot; Potenza Picena, Le Marche &middot; <a href="https://www.leggimenu.it/menu/cipolladoro">View original menu</a><br>
+  Foundation Model decode pending &mdash; template ready for Apple Intelligence
+</div>
+
+</div> <!-- end content-foundation -->
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TAB SWITCHING + MENU DECODER SCHEMA         -->
+<!-- ═══════════════════════════════════════════ -->
+<script>
+// Tab switching with URL hash support
+function switchTab(tab) {
+  // Update tab buttons
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  
+  // Update tab content
+  document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+  document.getElementById('content-' + tab).classList.add('active');
+  
+  // Update URL hash
+  history.replaceState(null, null, '#' + tab);
+}
+
+// Restore tab from URL hash on load
+(function() {
+  const hash = window.location.hash.replace('#', '');
+  if (hash === 'foundation') {
+    switchTab('foundation');
+  }
+})();
+
+// Menu Decoder Data Schema for iOS/macOS app integration
+window.MenuDecoderSchema = {
+  version: "1.0",
+  restaurant: {
+    name_it: "La Cipolla d'Oro",
+    name_en: "The Golden Onion",
+    location: {
+      city: "Potenza Picena",
+      province: "Macerata",
+      region: "Le Marche",
+      country: "Italy",
+      coordinates: { lat: 43.3653, lng: 13.6225 }
+    },
+    type: ["ristorante", "pizzeria", "wine-bar", "b&b"],
+    source_url: "https://www.leggimenu.it/menu/cipolladoro",
+    website: "https://www.cipolladoro.it"
+  },
+  sections: [
+    { id: "antipasti", name_it: "Antipasti", name_en: "Starters", intro: "Sharing plates of local charcuterie, cheeses, and seasonal vegetables from the hills around Ancona." },
+    { id: "cresce", name_it: "Crescia", name_en: "Flatbreads", intro: "Traditional Le Marche flatbreads, wood-fired and filled with local ingredients." },
+    { id: "primi", name_it: "Primi", name_en: "First Courses / Pasta", intro: "Handmade pasta and regional first courses celebrating Le Marche traditions." },
+    { id: "forno", name_it: "Dal Forno", name_en: "From the Oven", intro: "Slow-cooked dishes from the wood-fired oven." },
+    { id: "fritti", name_it: "Fritti", name_en: "Fried", intro: "Golden-fried specialties in the tradition of coastal Le Marche." },
+    { id: "padella", name_it: "In Padella", name_en: "Pan-Cooked", intro: "Sautéed dishes prepared in the pan with seasonal ingredients." },
+    { id: "brace", name_it: "Alla Brace", name_en: "From the Grill", intro: "The heart of the menu — meats cooked over live coals." },
+    { id: "tagliate", name_it: "Tagliate", name_en: "Sliced Steaks", intro: "Premium cuts, grilled and sliced, served with accompaniments." },
+    { id: "contorni", name_it: "Contorni", name_en: "Side Dishes", intro: "Seasonal vegetables and accompaniments." },
+    { id: "pizze-bianche", name_it: "Pizze Bianche", name_en: "White Pizzas", intro: "Wood-fired pizzas without tomato sauce." },
+    { id: "pizze-rosse", name_it: "Pizze Rosse", name_en: "Red Pizzas", intro: "Classic wood-fired pizzas with tomato." },
+    { id: "dessert", name_it: "Dessert", name_en: "Desserts", intro: "House-made sweets and traditional Italian desserts." },
+    { id: "bollicine", name_it: "Bollicine", name_en: "Bubbles", intro: "Sparkling wines and prosecco." },
+    { id: "champagne", name_it: "Champagne", name_en: "Champagne", intro: "French champagnes." },
+    { id: "bianchi", name_it: "Vini Bianchi", name_en: "White Wines", intro: "White wines from Le Marche and beyond." },
+    { id: "rossi", name_it: "Vini Rossi", name_en: "Red Wines", intro: "Red wines from Le Marche and beyond." },
+    { id: "rosati", name_it: "Rosé", name_en: "Ros&eacute; Wines", intro: "Rosé selections." },
+    { id: "dolci-vini", name_it: "Vini Dolci", name_en: "Sweet Wines", intro: "Dessert wines and passiti." },
+    { id: "birre", name_it: "Birre Artigianali", name_en: "Craft Beers", intro: "Local and Italian craft beers." },
+    { id: "bevande", name_it: "Bevande", name_en: "Drinks", intro: "Soft drinks, water, and non-alcoholic options." },
+    { id: "caffe", name_it: "Caffè & Digestivi", name_en: "Coffee &amp; After-Dinner", intro: "Espresso, liqueurs, and digestivi." },
+  ],
+  itemSchema: {
+    name_it: "string — Original Italian dish name",
+    name_en: "string — English translation (UPPERCASE)",
+    price: "string — e.g. '€13' or '€8/10' for size variants",
+    description: "string — Cultural context, ingredients, preparation notes",
+    ingredients: "string[] — Array of ingredient icon keys: beef, pork, lamb, poultry, game, fish, shellfish, cheese, cured, truffle, veg",
+    tags: "string[] — Optional: house-pick, shareable, seasonal, spicy, gluten-free",
+    cultural_context: "string — Optional deeper context about the dish or ingredients"
+  },
+  ingredientIcons: {
+    beef: "🐄", pork: "🐷", lamb: "🐑", poultry: "🐔",
+    game: "🦌", fish: "🐟", shellfish: "🦐", cheese: "🧀",
+    cured: "🥓", truffle: "🍄", veg: "🌿"
+  }
+};
+</script>
+
+<!-- Original selection & sharing functionality -->
 <script>
 (function() {
   // Make items clickable for selection
@@ -2462,6 +3121,12 @@
   };
 })();
 </script>
+
+
+<div class="footer" style="text-align:center;padding:1rem;font-size:0.7rem;font-family:'Inter',sans-serif;color:rgba(255,255,255,0.5);background:var(--blue-dark);">
+  Compare: Claude Opus 4 vs Apple Intelligence Foundation Model<br>
+  <a href="../index.html" style="color:var(--gold-light);text-decoration:none;">&larr; Back to Menu Decoder</a>
+</div>
 
 </body>
 </html>
