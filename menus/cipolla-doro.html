@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Cipolla d'Oro — Complete Menu in English</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #3b5998;
+    --blue-dark: #2c4373;
+    --gold: #c9a84c;
+    --gold-light: #e8d9a0;
+    --cream: #faf6ed;
+    --cream-dark: #f0e8d5;
+    --text: #2d2a24;
+    --text-light: #6b6459;
+    --text-muted: #9a9184;
+    --border: #e0d6c4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    padding-bottom: 4rem;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: white; text-align: center;
+    padding: 3rem 1.5rem 2.5rem;
+    position: relative; overflow: hidden;
+  }
+  .header::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .header-content { position: relative; z-index: 1; }
+  .restaurant-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.4rem; font-weight: 700;
+    letter-spacing: 0.02em; margin-bottom: 0.2rem;
+  }
+  .restaurant-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem; font-weight: 300;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    opacity: 0.7; margin-bottom: 0.6rem;
+  }
+  .restaurant-tagline {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.9rem; font-style: italic;
+    opacity: 0.6;
+  }
+  .divider-gold { width: 60px; height: 2px; background: var(--gold); margin: 1rem auto 0; }
+
+  /* ── NAV ── */
+  .nav {
+    background: var(--blue-dark); padding: 0.8rem 1rem;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem 0.5rem;
+    position: sticky; top: 0; z-index: 100;
+    border-bottom: 2px solid var(--gold);
+  }
+  .nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem; font-weight: 400;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: rgba(255,255,255,0.65); text-decoration: none;
+    padding: 0.3rem 0.6rem; border-radius: 3px;
+    transition: all 0.2s;
+  }
+  .nav a:hover { color: white; background: rgba(255,255,255,0.1); }
+
+  /* ── LEGEND ── */
+  .legend-bar {
+    max-width: 780px; margin: 0 auto;
+    padding: 1.2rem 1.5rem 1rem;
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem;
+    justify-content: center; align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .legend-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--text-muted); width: 100%; text-align: center;
+    margin-bottom: 0.2rem;
+  }
+  .legend-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem; color: var(--text-light);
+    display: flex; align-items: center; gap: 0.35rem;
+  }
+  .dot {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 6px;
+    font-size: 14px; flex-shrink: 0;
+    background: rgba(0,0,0,0.04);
+    transition: transform 0.15s;
+  }
+  .dot:hover { transform: scale(1.25); }
+  .dot-beef::after { content: '\1F404'; }
+  .dot-pork::after { content: '\1F437'; }
+  .dot-lamb::after { content: '\1F411'; }
+  .dot-poultry::after { content: '\1F414'; }
+  .dot-fish::after { content: '\1F41F'; }
+  .dot-shellfish::after { content: '\1F990'; }
+  .dot-veg::after { content: '\1F33F'; }
+  .dot-truffle::after { content: '\1F344'; }
+  .dot-cheese::after { content: '\1F9C0'; }
+  .dot-cured::after { content: '\1F953'; }
+  .dot-game::after { content: '\1F98C'; }
+
+  /* ── SECTIONS ── */
+  .section-header {
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: white; text-align: center;
+    padding: 2rem 1.5rem 1.5rem;
+    position: relative;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem; font-weight: 700;
+    letter-spacing: 0.02em; margin-bottom: 0.15rem;
+  }
+  .section-header .section-en {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem; font-weight: 300;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .section-intro {
+    max-width: 720px; margin: 0 auto;
+    padding: 1.2rem 1.5rem 0.8rem;
+    text-align: center; font-style: italic;
+    color: var(--text-light); font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── MENU ITEMS ── */
+  .menu-list { max-width: 780px; margin: 0 auto; padding: 0.5rem 1.5rem 2rem; }
+  .menu-item { padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
+  .menu-item:last-child { border-bottom: none; }
+  .item-header {
+    display: flex; justify-content: space-between;
+    align-items: baseline; gap: 1rem; margin-bottom: 0.1rem;
+  }
+  .item-name-it {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--blue-dark); flex: 1;
+  }
+  .item-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem; font-weight: 500;
+    color: var(--gold); white-space: nowrap;
+  }
+  .item-name-en {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem; font-weight: 400;
+    color: var(--text-muted); text-transform: uppercase;
+    letter-spacing: 0.08em; margin-bottom: 0.5rem;
+  }
+  .item-desc {
+    font-size: 0.88rem; color: var(--text-light); line-height: 1.7;
+  }
+  .item-dots {
+    display: flex; gap: 0.35rem; margin-top: 0.5rem;
+    align-items: center; flex-wrap: wrap;
+  }
+  .item-dots .dot { width: 20px; height: 20px; font-size: 13px; }
+  .dot-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem; color: var(--text-muted);
+    margin-right: 0.3rem;
+  }
+  .item-note {
+    display: inline-block; margin-top: 0.5rem; margin-right: 0.4rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem; font-weight: 500;
+    color: var(--gold);
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.25);
+    padding: 0.2rem 0.55rem; border-radius: 3px;
+  }
+  .pick-badge {
+    display: inline-block; margin-left: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem; font-weight: 500;
+    color: white; background: var(--gold);
+    padding: 0.12rem 0.45rem; border-radius: 2px;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    vertical-align: middle; position: relative; top: -2px;
+  }
+
+  /* ── WINE ITEMS ── */
+  .wine-item { padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+  .wine-item:last-child { border-bottom: none; }
+  .wine-header {
+    display: flex; justify-content: space-between;
+    align-items: baseline; gap: 1rem;
+  }
+  .wine-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--blue-dark); flex: 1;
+  }
+  .wine-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem; font-weight: 500;
+    color: var(--gold); white-space: nowrap;
+  }
+  .wine-desc {
+    font-size: 0.82rem; color: var(--text-light);
+    line-height: 1.65; margin-top: 0.2rem;
+  }
+  .wine-region {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .wine-note {
+    display: inline-block; margin-top: 0.3rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem; font-weight: 500;
+    color: var(--gold);
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.25);
+    padding: 0.15rem 0.45rem; border-radius: 3px;
+  }
+
+  /* ── DRINK ITEMS (simpler) ── */
+  .drink-item {
+    padding: 0.6rem 0; border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .drink-item:last-child { border-bottom: none; }
+  .drink-name {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.92rem; color: var(--text); flex: 1;
+  }
+  .drink-en {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem; color: var(--text-muted);
+  }
+  .drink-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem; font-weight: 500;
+    color: var(--gold); white-space: nowrap;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--blue-dark); color: rgba(255,255,255,0.5);
+    text-align: center; padding: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem; letter-spacing: 0.05em;
+  }
+  .footer a { color: var(--gold-light); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .restaurant-name { font-size: 1.7rem; }
+    .section-header h2 { font-size: 1.2rem; }
+    .item-name-it { font-size: 0.95rem; }
+    .header { padding: 2rem 1rem 1.8rem; }
+    .menu-list { padding: 0.5rem 1rem 2rem; }
+    .nav a { font-size: 0.6rem; padding: 0.25rem 0.4rem; }
+  }
+
+  /* ── SELECTOR CHECKBOXES ── */
+  .menu-item, .wine-item, .drink-item {
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+    padding-left: 2.2rem !important;
+  }
+  .menu-item::before, .wine-item::before, .drink-item::before {
+    content: '';
+    position: absolute;
+    left: 0.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px; height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    background: white;
+    transition: all 0.2s;
+  }
+  .menu-item.selected::before, .wine-item.selected::before, .drink-item.selected::before {
+    background: var(--gold);
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(201,168,76,0.2);
+  }
+  .menu-item.selected::after, .wine-item.selected::after, .drink-item.selected::after {
+    content: '\2713';
+    position: absolute;
+    left: 0.55rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    z-index: 1;
+  }
+  .menu-item.selected, .wine-item.selected, .drink-item.selected {
+    background: rgba(201,168,76,0.06);
+    border-radius: 6px;
+  }
+  .menu-item:hover, .wine-item:hover, .drink-item:hover {
+    background: rgba(201,168,76,0.03);
+  }
+
+  /* ── FLOATING SHARE BAR ── */
+  .share-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--blue-dark);
+    color: white;
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    z-index: 200;
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+    flex-wrap: wrap;
+  }
+  .share-bar.visible { transform: translateY(0); }
+  .share-bar .count {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--gold-light);
+    white-space: nowrap;
+  }
+  .share-bar .count strong {
+    font-size: 1.1rem;
+    color: var(--gold);
+  }
+  .share-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+  .share-btn-imessage {
+    background: #34C759;
+    color: white;
+  }
+  .share-btn-imessage:hover { background: #2DB84D; }
+  .share-btn-mail {
+    background: #007AFF;
+    color: white;
+  }
+  .share-btn-mail:hover { background: #0066DD; }
+  .share-btn-copy {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+  .share-btn-copy:hover { background: rgba(255,255,255,0.25); }
+  .share-btn-clear {
+    background: transparent;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .share-btn-clear:hover { color: white; }
+  .share-btn .btn-icon { font-size: 1rem; }
+  .copied-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: var(--blue-dark);
+    color: var(--gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    z-index: 300;
+  }
+  .copied-toast.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  @media (max-width: 600px) {
+    .share-bar { padding: 0.5rem 0.6rem; gap: 0.4rem; }
+    .share-btn { font-size: 0.7rem; padding: 0.45rem 0.7rem; }
+    .menu-item, .wine-item, .drink-item { padding-left: 1.8rem !important; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- HEADER                                      -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="header">
+  <div class="header-content">
+    <div class="restaurant-sub">Ristorante &amp; B&amp;B &middot; Ancona, Le Marche</div>
+    <div class="restaurant-name">La Cipolla d'Oro</div>
+    <div class="restaurant-tagline">"The Golden Onion"</div>
+    <div class="divider-gold"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STICKY NAV                                  -->
+<!-- ═══════════════════════════════════════════ -->
+<nav class="nav">
+  <a href="#antipasti">Antipasti</a>
+  <a href="#cresce">Cresce</a>
+  <a href="#primi">Primi</a>
+  <a href="#forno">Oven</a>
+  <a href="#fritti">Fried</a>
+  <a href="#padella">Pan</a>
+  <a href="#brace">Grill</a>
+  <a href="#tagliate">Tagliate</a>
+  <a href="#contorni">Sides</a>
+  <a href="#pizze-bianche">Pizza Bianca</a>
+  <a href="#pizze-rosse">Pizza Rossa</a>
+  <a href="#dessert">Dessert</a>
+  <a href="#bollicine">Bubbles</a>
+  <a href="#champagne">Champagne</a>
+  <a href="#bianchi">White Wines</a>
+  <a href="#rossi">Red Wines</a>
+  <a href="#rosati">Ros&eacute;</a>
+  <a href="#passiti">Sweet Wines</a>
+  <a href="#birre">Craft Beer</a>
+  <a href="#bevande">Drinks</a>
+  <a href="#caffe">Coffee &amp; Digestivi</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- LEGEND                                      -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="legend-bar">
+  <div class="legend-title">Ingredient Key &mdash; tap to learn</div>
+  <div class="legend-item"><span class="dot dot-beef"></span> Beef</div>
+  <div class="legend-item"><span class="dot dot-pork"></span> Pork</div>
+  <div class="legend-item"><span class="dot dot-lamb"></span> Lamb</div>
+  <div class="legend-item"><span class="dot dot-poultry"></span> Poultry / Duck</div>
+  <div class="legend-item"><span class="dot dot-game"></span> Game</div>
+  <div class="legend-item"><span class="dot dot-fish"></span> Fish</div>
+  <div class="legend-item"><span class="dot dot-shellfish"></span> Shellfish</div>
+  <div class="legend-item"><span class="dot dot-cheese"></span> Cheese / Dairy</div>
+  <div class="legend-item"><span class="dot dot-cured"></span> Cured Meats</div>
+  <div class="legend-item"><span class="dot dot-truffle"></span> Truffle</div>
+  <div class="legend-item"><span class="dot dot-veg"></span> Vegetarian</div>
+</div>
+<div style="text-align:center; padding:0.6rem 1rem; font-family:'Inter',sans-serif; font-size:0.72rem; color:var(--text-muted); letter-spacing:0.03em;">
+  ☝️ Tap any dish to add it to your order &mdash; then share via iMessage or Mail
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- ANTIPASTI                                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="antipasti">
+  <h2>Antipasti</h2>
+  <div class="section-en">Starters</div>
+</div>
+<div class="section-intro">Sharing plates of local charcuterie, cheeses, and seasonal vegetables from the hills around Ancona and the Macerata interior.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Degustazione di Salumi e Formaggi</div>
+      <div class="item-price">&euro;13</div>
+    </div>
+    <div class="item-name-en">Tasting board of cured meats &amp; cheeses</div>
+    <div class="item-desc">A sharing platter of locally produced salumi and cheeses from the Marchigiano hills. Expect a selection of prosciutto, salame, lonza, and possibly ciauscolo (a spreadable pork salame unique to Le Marche), alongside aged pecorino, fresh caciotta, and other regional cheeses. Perfect for two to share while you decide on the rest.</div>
+    <div class="item-dots"><span class="dot dot-cured"></span><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Great for Sharing</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Degustazione di Formaggi</div>
+      <div class="item-price">&euro;12</div>
+    </div>
+    <div class="item-name-en">Cheese tasting board</div>
+    <div class="item-desc">A cheese-only selection showcasing the dairy traditions of the Marche and central Italy — likely including fresh and aged pecorino, caciotta, and possibly a creamy stracchino or gorgonzola. Served with honey or mostarda.</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Prosciutto Crudo Nostrano</div>
+      <div class="item-price">&euro;12</div>
+    </div>
+    <div class="item-name-en">Local dry-cured ham</div>
+    <div class="item-desc">"Nostrano" means "our own" — this is locally produced prosciutto crudo, likely from small producers in the hills south of Ancona. Compared to Parma or San Daniele, Marchigiano prosciutto tends to be slightly more savoury and rustic with a firmer texture.</div>
+    <div class="item-dots"><span class="dot dot-cured"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Bresaola Rucola e Grana</div>
+      <div class="item-price">&euro;12</div>
+    </div>
+    <div class="item-name-en">Air-dried beef with arugula &amp; aged Grana cheese</div>
+    <div class="item-desc">Thinly sliced air-dried, salt-cured beef from the Valtellina tradition, draped over peppery arugula and topped with shavings of aged Grana Padano. Typically dressed with olive oil and a squeeze of lemon. Lean, delicate, and elegant — a classic Italian light starter.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Manzarda di Manzo al Sale con Burratina Pugliese</div>
+      <div class="item-price">&euro;20</div>
+    </div>
+    <div class="item-name-en">Salt-cured beef with Puglian burrata</div>
+    <div class="item-desc">A rare delicacy — manzarda is a traditional Marchigiano salt-cured beef preparation, similar to bresaola but with a more intensely savoury, concentrated flavour. Paired with a small burrata from Puglia, which adds a luscious, creamy contrast. The salt of the beef against the sweet cream of the burrata is a beautiful combination. One of the more luxurious starters on the menu.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Signature Dish</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Burratina Pugliese</div>
+      <div class="item-price">&euro;6</div>
+    </div>
+    <div class="item-name-en">Small Puglian burrata</div>
+    <div class="item-desc">A small burrata cheese from Puglia — a pouch of fresh mozzarella filled with stracciatella (shredded mozzarella in cream). When you cut it open, the creamy interior spills out. Simple, rich, and perfect with good bread and olive oil.</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Insalata di Mela con Rucola, Noci, Pinoli e Aceto Balsamico</div>
+      <div class="item-price">&euro;6</div>
+    </div>
+    <div class="item-name-en">Apple salad with arugula, walnuts, pine nuts &amp; balsamic vinegar</div>
+    <div class="item-desc">A crisp, refreshing salad of sliced apple over peppery arugula, scattered with walnuts and pine nuts, and dressed with balsamic vinegar. Sweet, bitter, and nutty — a lighter start if you're saving room for the grill or a rich primo.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Parmigiana di Melanzane</div>
+      <div class="item-price">&euro;8</div>
+    </div>
+    <div class="item-name-en">Eggplant parmesan</div>
+    <div class="item-desc">Layers of fried eggplant slices baked with tomato sauce, mozzarella, basil, and Parmigiano. A southern Italian classic that's beloved across the whole country. Expect a rich, bubbling, golden-topped portion — hearty enough to be a meal on its own.</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Frittatina al Tartufo Nero Estivo</div>
+      <div class="item-price">&euro;15</div>
+    </div>
+    <div class="item-name-en">Small frittata with summer black truffle</div>
+    <div class="item-desc">A delicate egg frittata infused with summer black truffle (tartufo nero estivo). The eggs provide a gentle, custardy base that lets the earthy truffle flavour come through beautifully. The Marche, especially near Acqualagna, is prime truffle territory, so this is about as local as it gets.</div>
+    <div class="item-dots"><span class="dot dot-truffle"></span><span class="dot dot-veg"></span></div>
+    <span class="item-note">Truffle</span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- LE CRESCE                                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="cresce">
+  <h2>Le Cresce</h2>
+  <div class="section-en">Marchigiano Flatbreads</div>
+</div>
+<div class="section-intro">Crescia is a traditional Marche flatbread, historically made during harvest, grape-picking, and pig slaughter — when hearty appetites needed satisfying. Cooked on a hot griddle, it pairs beautifully with field herbs, local cured meats, and cheeses from these hills. You won't find this outside the region.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Classica (rosmarino)</div>
+      <div class="item-price">&euro;5</div>
+    </div>
+    <div class="item-name-en">Classic with rosemary</div>
+    <div class="item-desc">The simplest crescia — just the dough flavoured with rosemary. Crispy outside, slightly chewy inside. A good way to taste the bread itself.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Cipolletta (cipolla)</div>
+      <div class="item-price">&euro;5</div>
+    </div>
+    <div class="item-name-en">With onion</div>
+    <div class="item-desc">Crescia folded with sweet cooked onion — a nod to the restaurant's name ("The Golden Onion"). Sweet, caramelised, and comforting.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Marinara (pomodoro, aglio, origano)</div>
+      <div class="item-price">&euro;6</div>
+    </div>
+    <div class="item-name-en">Tomato, garlic &amp; oregano</div>
+    <div class="item-desc">Dressed with the classic marinara trio. Simple and aromatic.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Crudo (prosciutto crudo)</div>
+      <div class="item-price">&euro;7</div>
+    </div>
+    <div class="item-name-en">With dry-cured ham</div>
+    <div class="item-desc">The classic pairing — warm crescia folded around slices of local prosciutto crudo. The heat of the bread slightly softens the fat in the ham, releasing its fragrance. Simple perfection.</div>
+    <div class="item-dots"><span class="dot dot-cured"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Piccantina (cipolla, salsiccia, peperoncino)</div>
+      <div class="item-price">&euro;7.50</div>
+    </div>
+    <div class="item-name-en">Spicy — onion, sausage &amp; chilli</div>
+    <div class="item-desc">A fiery combination of sweet onion, crumbled pork sausage, and hot chilli pepper. Bold and satisfying — the spice lovers' pick.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">La Griglia (verdure grigliate, funghi champignon)</div>
+      <div class="item-price">&euro;7.50</div>
+    </div>
+    <div class="item-name-en">Grilled vegetables &amp; mushrooms</div>
+    <div class="item-desc">Charred seasonal vegetables and champignon mushrooms inside the warm crescia. Smoky and satisfying — the vegetarian choice.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Pecorara (pecorino, guanciale, cipolla)</div>
+      <div class="item-price">&euro;8</div>
+    </div>
+    <div class="item-name-en">Pecorino cheese, cured pork cheek &amp; onion</div>
+    <div class="item-desc">The "shepherd's crescia" — salty, sharp pecorino cheese with rich rendered guanciale (cured pork jowl) and sweet onion. A powerfully flavoured combination that channels the pastoral traditions of these hills.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Recommended</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Stracchina (stracchino, rucola, prosciutto crudo)</div>
+      <div class="item-price">&euro;8</div>
+    </div>
+    <div class="item-name-en">Stracchino cheese, arugula &amp; dry-cured ham</div>
+    <div class="item-desc">Soft, creamy stracchino cheese melting into the warm crescia, with peppery arugula and salty prosciutto crudo. The contrast of cool cheese, bitter green, and sweet-salty ham makes this one of the best things on the menu.</div>
+    <div class="item-dots"><span class="dot dot-cured"></span><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Recommended</span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- PRIMI PIATTI                                -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="primi">
+  <h2>Primi Piatti</h2>
+  <div class="section-en">First Courses &mdash; Handmade Pasta</div>
+</div>
+<div class="section-intro">All pastas are handmade in-house in the Marchigiano tradition. Portions are generous. Several dishes offer a choice of pasta shape — ask your server what's freshest today.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliatelle o Gnocchi al Battuto Maceratese</div>
+      <div class="item-price">&euro;10</div>
+    </div>
+    <div class="item-name-en">Tagliatelle or gnocchi with Macerata-style rag&ugrave;</div>
+    <div class="item-desc"><em>Battuto maceratese</em> is a slow-cooked meat rag&ugrave; specific to the Macerata province. Unlike Bolognese, it's built on finely hand-chopped (not ground) pork, veal, and aromatics including celery, braised until rich and dense. The name "battuto" refers to chopping the meat by hand with a mezzaluna. A true local signature.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-beef"></span></div>
+    <span class="item-note">Local Signature</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Gnocchi, Tagliolini o Tagliatelle alla Papera</div>
+      <div class="item-price">&euro;10</div>
+    </div>
+    <div class="item-name-en">Gnocchi, tagliolini, or tagliatelle with duck rag&ugrave;</div>
+    <div class="item-desc">"Papera" means duck in Marchigiano dialect. The meat is simmered until it falls apart into a rich, slightly gamey sauce — lighter than beef or pork rag&ugrave;. Duck was commonly raised on the farms of central Italy alongside pigs and geese.</div>
+    <div class="item-dots"><span class="dot dot-poultry"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Pappardelle al Rag&ugrave; di Cinghiale in Bianco</div>
+      <div class="item-price">&euro;12</div>
+    </div>
+    <div class="item-name-en">Pappardelle with wild boar rag&ugrave;, no tomato</div>
+    <div class="item-desc">Wide ribbony egg pappardelle with slow-braised wild boar "in bianco" — without tomato, so the deep, woodsy flavour of the cinghiale comes through. The boar is likely sourced from the nearby Sibillini Mountains, marinated in wine, juniper, and bay leaf before braising for hours. Rich, earthy, distinctly Marchigiano.</div>
+    <div class="item-dots"><span class="dot dot-game"></span></div>
+    <span class="item-note">Recommended</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Ravioli, Tagliatelle o Passatelli alla Norcina</div>
+      <div class="item-price">&euro;11</div>
+    </div>
+    <div class="item-name-en">Ravioli, tagliatelle, or passatelli in Norcia-style sauce</div>
+    <div class="item-desc">"Alla norcina" is a sauce from Norcia in Umbria: crumbled pork sausage, black truffle, and cream. The passatelli option is especially interesting — short, worm-shaped strands made from breadcrumbs, Parmigiano, egg, and nutmeg, traditionally served in broth but here "asciutti" (dry) with the creamy sauce. A collision of three Italian regions.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-truffle"></span><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Foglie Verdi Rucola, Grana e Pachino</div>
+      <div class="item-price">&euro;12</div>
+    </div>
+    <div class="item-name-en">Green leaf pasta with arugula, Grana cheese &amp; cherry tomatoes</div>
+    <div class="item-desc">"Foglie verdi" are flat pasta shapes cut to resemble leaves, with spinach or herbs worked into the dough. Tossed simply with peppery arugula, salty Grana, and sweet Sicilian cherry tomatoes. A lighter, fresher option compared to the rich rag&ugrave;s.</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Triangoli con Verdure a Vapore e Tartufo Nero</div>
+      <div class="item-price">&euro;13</div>
+    </div>
+    <div class="item-name-en">Triangle stuffed pasta with steamed vegetables &amp; black truffle</div>
+    <div class="item-desc">Triangular filled pasta parcels served with steamed seasonal vegetables and shaved summer black truffle. The Marche — especially Acqualagna — is Italy's truffle heartland. Summer black truffle is milder than winter white, with a gentle earthy aroma.</div>
+    <div class="item-dots"><span class="dot dot-truffle"></span><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Cappellacci di Bufala con Pachino e Crema di Basilico <span class="pick-badge">Heather's Pick</span></div>
+      <div class="item-price">&euro;14</div>
+    </div>
+    <div class="item-name-en">Buffalo mozzarella cappellacci with cherry tomatoes &amp; basil cream</div>
+    <div class="item-desc">Cappellacci — large "ugly hat" shaped stuffed pasta — filled with creamy buffalo mozzarella, sauced with sweet Pachino cherry tomatoes and vibrant basil cream. Like a deconstructed caprese in pasta form. Expect a burst of warm, melty mozzarella inside each parcel. Rich but bright.</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Ravioli o Tagliatelle al Tartufo Nero Estivo</div>
+      <div class="item-price">&euro;16</div>
+    </div>
+    <div class="item-name-en">Ravioli or tagliatelle with summer black truffle</div>
+    <div class="item-desc">The truffle showcase — handmade pasta dressed generously with summer black truffle, likely in a butter and Parmigiano base. At &euro;16 this is remarkably fair pricing; the Marche's proximity to Acqualagna means short supply chains and fresh truffle.</div>
+    <div class="item-dots"><span class="dot dot-truffle"></span><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Truffle</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Saraceni con Rucola, Grana e Pachino</div>
+      <div class="item-price">&euro;12</div>
+    </div>
+    <div class="item-name-en">Buckwheat pasta with arugula, Grana cheese &amp; cherry tomatoes</div>
+    <div class="item-desc">"Saraceni" means buckwheat pasta — <em>grano saraceno</em> ("Saracen grain") arrived in Italy via medieval trade routes. Despite the name, buckwheat isn't actually wheat; it's a seed related to rhubarb. It gives the pasta a nutty, earthy, toasty flavour and darker colour. More rustic and robust than the similar foglie verdi dish.</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Orecchiette con Fava, Alici e Pomodorini</div>
+      <div class="item-price">&euro;11</div>
+    </div>
+    <div class="item-name-en">Orecchiette with fava beans, anchovies &amp; cherry tomatoes</div>
+    <div class="item-desc">A nod to Puglia — orecchiette ("little ears") are small concave pasta shapes, here combined with fresh fava beans, umami-rich anchovies that melt into the sauce, and sweet pomodorini. The anchovies dissolve during cooking, leaving behind savoury depth. A lighter, more Mediterranean option on a menu that otherwise leans meaty.</div>
+    <div class="item-dots"><span class="dot dot-fish"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Strengozzi Guanciale e Pepe</div>
+      <div class="item-price">&euro;10</div>
+    </div>
+    <div class="item-name-en">Hand-torn pasta with cured pork cheek &amp; black pepper</div>
+    <div class="item-desc">Strengozzi are thick, rough-textured hand-torn noodles from the Umbria-Marche border. The name supposedly derives from "strangling." Think of this as the local riff on Rome's gricia: rendered guanciale (cured pork jowl) tossed with cracked black pepper, bound by starchy pasta water and cheese. The pasta's rough surface grabs every bit of sauce.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Sleeper Hit</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Pasta Senza Glutine con Salsa a Richiesta</div>
+      <div class="item-price">&euro;13</div>
+    </div>
+    <div class="item-name-en">Gluten-free pasta with your choice of sauce</div>
+    <div class="item-desc">Gluten-free pasta with any sauce from the menu. Ask your server what they recommend.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Pasta Senza Glutine al Tartufo Nero Estivo</div>
+      <div class="item-price">&euro;18</div>
+    </div>
+    <div class="item-name-en">Gluten-free pasta with summer black truffle</div>
+    <div class="item-desc">The truffle treatment on gluten-free pasta. The premium reflects the cost of quality GF pasta.</div>
+    <div class="item-dots"><span class="dot dot-truffle"></span></div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECONDI AL FORNO                            -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="forno">
+  <h2>Secondi Piatti al Forno</h2>
+  <div class="section-en">Oven-Baked Mains</div>
+</div>
+<div class="section-intro">Slow-cooked and oven-roasted dishes. The coniglio, oca, and maialino require advance ordering — ask your server if they're available tonight.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Scamorza al Forno con Radicchio</div>
+      <div class="item-price">&euro;10</div>
+    </div>
+    <div class="item-name-en">Baked scamorza cheese with radicchio</div>
+    <div class="item-desc">Scamorza is a semi-soft, slightly smoked stretched-curd cheese (similar to mozzarella but firmer). Here it's baked until golden and bubbling, served over bitter radicchio. The sweetness of the melted cheese against the bitter green is a great contrast. Effectively vegetarian.</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Coniglio in Porchetta</div>
+      <div class="item-price">&euro;15</div>
+    </div>
+    <div class="item-name-en">Rabbit roasted "porchetta-style" &mdash; min. 4 people, pre-order</div>
+    <div class="item-desc">"In porchetta" means the rabbit is deboned, stuffed with garlic, fennel, rosemary, and herbs (the same treatment as the famous porchetta pig), then rolled and slow-roasted. Incredibly aromatic and tender. A true Marchigiano speciality — requires advance ordering for a minimum of 4 guests.</div>
+    <div class="item-dots"><span class="dot dot-game"></span></div>
+    <span class="item-note">Pre-Order Only</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Oca al Forno</div>
+      <div class="item-price">&euro;22</div>
+    </div>
+    <div class="item-name-en">Roast goose &mdash; min. 4 people, pre-order</div>
+    <div class="item-desc">Whole roasted goose — a farmhouse tradition in the Marche countryside, where geese were raised alongside pigs. Rich, dark, flavourful meat with crispy skin. Requires advance ordering for a minimum of 4.</div>
+    <div class="item-dots"><span class="dot dot-poultry"></span></div>
+    <span class="item-note">Pre-Order Only</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Maialino allo Spiedo</div>
+      <div class="item-price">&euro;20</div>
+    </div>
+    <div class="item-name-en">Spit-roasted suckling pig &mdash; min. 6 people, pre-order</div>
+    <div class="item-desc">A whole young pig slowly turned on a spit over embers. Crispy, crackling skin and incredibly tender, juicy meat. A celebration dish — requires advance ordering for at least 6 guests.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span></div>
+    <span class="item-note">Pre-Order Only</span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECONDI FRITTI                              -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="fritti">
+  <h2>Secondi Piatti Fritti</h2>
+  <div class="section-en">Fried Mains</div>
+</div>
+<div class="section-intro">The Marche has a proud frying tradition — from olive ascolane to crema fritta. These mains carry that same crispy, golden spirit.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Agnello Fritto</div>
+      <div class="item-price">&euro;16</div>
+    </div>
+    <div class="item-name-en">Fried lamb</div>
+    <div class="item-desc">Bone-in pieces of lamb, lightly battered and deep-fried until golden. A traditional Easter and spring dish in central Italy. The frying keeps the meat incredibly juicy inside while the crust shatters. Simple and irresistible.</div>
+    <div class="item-dots"><span class="dot dot-lamb"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Cotoletta di Vitello</div>
+      <div class="item-price">&euro;10</div>
+    </div>
+    <div class="item-name-en">Breaded veal cutlet</div>
+    <div class="item-desc">A bone-in veal cutlet, pounded, breaded, and fried golden. The Italian cousin of a Wiener schnitzel — crunchy outside, tender and juicy inside.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Cotoletta di Pollo</div>
+      <div class="item-price">&euro;9</div>
+    </div>
+    <div class="item-name-en">Breaded chicken cutlet</div>
+    <div class="item-desc">Chicken breast pounded thin, breaded, and fried. A lighter, more affordable alternative to the veal version.</div>
+    <div class="item-dots"><span class="dot dot-poultry"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Frittura di Carne all'Italiana</div>
+      <div class="item-price">&euro;16</div>
+    </div>
+    <div class="item-name-en">Italian mixed meat fry — lamb, chicken &amp; veal</div>
+    <div class="item-desc">A platter of all three fried meats: lamb, chicken, and veal, all lightly battered and fried golden. A generous mixed plate that lets you taste everything. Classic central Italian trattoria fare.</div>
+    <div class="item-dots"><span class="dot dot-lamb"></span><span class="dot dot-poultry"></span><span class="dot dot-beef"></span></div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECONDI IN PADELLA                          -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="padella">
+  <h2>Secondi Piatti in Padella</h2>
+  <div class="section-en">Pan-Cooked Mains</div>
+</div>
+<div class="section-intro">Seared and sauced — refined preparations with more complex flavour profiles.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Medaglioni di Manzo con Pere e Agro</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Beef medallions with pears &amp; sweet-sour sauce</div>
+    <div class="item-desc">Thick-cut beef medallions (likely from the fillet or sirloin) pan-seared and served with poached pears in an "agro" — a traditional Italian sweet-and-sour reduction. The sweetness of the pear and the tangy sauce balance the rich beef beautifully. An elegant, refined dish.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Agnello al Rum</div>
+      <div class="item-price">&euro;25</div>
+    </div>
+    <div class="item-name-en">Lamb braised in rum</div>
+    <div class="item-desc">An unusual and intriguing preparation — lamb pieces slow-braised with rum, which adds a deep, caramelised sweetness to the gamey meat. The alcohol cooks off, leaving behind complex, warming flavours. Not something you see often — worth trying if you're adventurous.</div>
+    <div class="item-dots"><span class="dot dot-lamb"></span></div>
+    <span class="item-note">Unusual &amp; Interesting</span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECONDI ALLA BRACE                          -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="brace">
+  <h2>Secondi Piatti alla Brace</h2>
+  <div class="section-en">From the Charcoal Grill</div>
+</div>
+<div class="section-intro">The heart of the menu. Everything here is cooked over live charcoal — arrosticini, scottadito, fillets, and massive Marchigiana beef steaks. This is what the kitchen is proudest of.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Grigliata Mista</div>
+      <div class="item-price">&euro;16</div>
+    </div>
+    <div class="item-name-en">Mixed grill — mutton skewer, lamb, sausage, ribs, capocollo &amp; pork liver</div>
+    <div class="item-desc">The full tour of the grill: arrosticino di castrato (mutton skewer), lamb, salsiccia (pork sausage), costine (pork ribs), capocollo (pork neck), and fegatino (pork liver). A generous sampling platter that represents the whole central Italian grilling tradition. Outstanding value.</div>
+    <div class="item-dots"><span class="dot dot-lamb"></span><span class="dot dot-pork"></span></div>
+    <span class="item-note">Great Value</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Agnello Scottadito</div>
+      <div class="item-price">&euro;18</div>
+    </div>
+    <div class="item-name-en">"Burn your fingers" lamb chops</div>
+    <div class="item-desc">Tiny lamb rib chops grilled fast over fierce heat and eaten with your hands while still scorching hot — that's what "scottadito" means. Just salt, olive oil, and fire. One of the most iconic dishes of central Italy. Charred outside, pink and juicy inside.</div>
+    <div class="item-dots"><span class="dot dot-lamb"></span></div>
+    <span class="item-note">Must Try</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Costine di Agnello</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Lamb ribs</div>
+    <div class="item-desc">A larger, meatier cut than the scottadito — full lamb ribs grilled over charcoal. More meat to work with, same wonderful charred-lamb flavour.</div>
+    <div class="item-dots"><span class="dot dot-lamb"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Arrosticini di Castrato (10 pz)</div>
+      <div class="item-price">&euro;10</div>
+    </div>
+    <div class="item-name-en">Mutton skewers — 10 pieces</div>
+    <div class="item-desc">Small cubes of castrato (mature mutton) threaded on thin wooden skewers and grilled over charcoal. Originally from Abruzzo, now beloved across the central Apennines. The flavour is deeper and more complex than lamb — slightly gamey, smoky, addictive. You'll want more than ten.</div>
+    <div class="item-dots"><span class="dot dot-lamb"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Spadino del Cavaliere (per 2 persone)</div>
+      <div class="item-price">&euro;30</div>
+    </div>
+    <div class="item-name-en">The Knight's Sword — large meat skewer for 2</div>
+    <div class="item-desc">A dramatic, sword-length skewer loaded with alternating pieces of beef and pork sausage, grilled over charcoal. Designed and priced for two people to share. A fun, celebratory centerpiece if you want to go big.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span><span class="dot dot-pork"></span></div>
+    <span class="item-note">For Two</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Paillard di Manzo</div>
+      <div class="item-price">&euro;10</div>
+    </div>
+    <div class="item-name-en">Thin-pounded grilled beef steak</div>
+    <div class="item-desc">A thin, pounded piece of beef grilled quickly over high heat. Light, lean, and simple — good if you want grilled meat without a heavy portion.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Fegatini di Maiale</div>
+      <div class="item-price">&euro;12</div>
+    </div>
+    <div class="item-name-en">Grilled pork liver</div>
+    <div class="item-desc">Pork liver wrapped in caul fat and grilled — a very traditional preparation. Rich and intense, with a slightly mineral flavour. For offal lovers.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Bistecca di Maiale</div>
+      <div class="item-price">&euro;9</div>
+    </div>
+    <div class="item-name-en">Grilled pork steak</div>
+    <div class="item-desc">A bone-in pork chop, charcoal-grilled. Simple, affordable, satisfying.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Salsiccia</div>
+      <div class="item-price">&euro;9</div>
+    </div>
+    <div class="item-name-en">Grilled pork sausage</div>
+    <div class="item-desc">Local pork sausage, charcoal-grilled until the casing is crisp and the inside is juicy. Italian sausage is typically seasoned simply with salt, pepper, and fennel seed.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Petto di Pollo alla Brace</div>
+      <div class="item-price">&euro;10</div>
+    </div>
+    <div class="item-name-en">Grilled chicken breast</div>
+    <div class="item-desc">Chicken breast grilled over charcoal. A lighter, leaner option from the grill.</div>
+    <div class="item-dots"><span class="dot dot-poultry"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Filetto di Manzo ai Ferri Mignon (gr 200)</div>
+      <div class="item-price">&euro;20</div>
+    </div>
+    <div class="item-name-en">Small grilled beef fillet — 200g</div>
+    <div class="item-desc">A smaller portion of beef fillet, grilled simply over charcoal. Tender and clean-flavoured. Good if you want fillet but don't need a full-size cut.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Filetto di Manzo ai Ferri</div>
+      <div class="item-price">&euro;25</div>
+    </div>
+    <div class="item-name-en">Grilled beef fillet</div>
+    <div class="item-desc">Full-size beef fillet, charcoal-grilled. The purist's choice.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Filetto di Manzo in Salsa di Avocado</div>
+      <div class="item-price">&euro;25</div>
+    </div>
+    <div class="item-name-en">Beef fillet with avocado sauce</div>
+    <div class="item-desc">Grilled fillet with a house-made sauce of avocado, lime, onion, salt, and oil — essentially a guacamole-style accompaniment. An unusual fusion touch on an otherwise traditional menu. The richness of the avocado complements the lean fillet well.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Filetto di Manzo all'Aceto Balsamico</div>
+      <div class="item-price">&euro;25</div>
+    </div>
+    <div class="item-name-en">Beef fillet with balsamic vinegar reduction</div>
+    <div class="item-desc">Grilled fillet glazed with aged balsamic vinegar — the sweet acidity cuts through the richness of the beef. A classic Italian steakhouse preparation.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Filetto di Manzo al Pepe Verde alla Griglia</div>
+      <div class="item-price">&euro;25</div>
+    </div>
+    <div class="item-name-en">Grilled beef fillet with green peppercorn</div>
+    <div class="item-desc">Grilled (not pan-seared) fillet with green peppercorns. The menu notes specifically "non saltato in padella" — so this is grilled, not the classic French steak au poivre approach. The green peppercorn adds mild, fruity heat.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Filetto di Manzo ai Funghi Porcini</div>
+      <div class="item-price">&euro;28</div>
+    </div>
+    <div class="item-name-en">Beef fillet with porcini mushrooms</div>
+    <div class="item-desc">The premium fillet — topped with porcini mushrooms, one of the great luxuries of Italian cooking. Earthy, meaty, and deeply savoury. The porcini and beef combination is one of the most satisfying things in Italian cuisine.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Controfiletto Argentino di Manzo</div>
+      <div class="item-price">&euro;22</div>
+    </div>
+    <div class="item-name-en">Argentine beef sirloin</div>
+    <div class="item-desc">Imported Argentine sirloin (controfiletto), charcoal-grilled. Argentine beef is grass-fed and tends to have a more mineral, intense flavour than European grain-fed beef. A solid, beefy steak.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Controfiletto Argentino di Manzo con Uovo Fritto</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Argentine beef sirloin topped with a fried egg</div>
+    <div class="item-desc">Same Argentine sirloin, crowned with a fried egg — the runny yolk acts as a rich, silky sauce over the steak. A nod to the South American "bife a caballo" tradition.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Bistecca di Vitello (piccola, gr 300)</div>
+      <div class="item-price">&euro;17</div>
+    </div>
+    <div class="item-name-en">Small veal steak — 300g</div>
+    <div class="item-desc">A smaller bone-in veal chop, grilled. Veal is more delicate and tender than mature beef, with a milder flavour.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Bistecca di Vitello (gr 500)</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Veal steak — 500g</div>
+    <div class="item-desc">The full-size veal chop. Serious meat for serious appetites.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Lombata di Vitello (gr 900/1kg)</div>
+      <div class="item-price">&euro;40</div>
+    </div>
+    <div class="item-name-en">Veal loin chop — 900g to 1kg</div>
+    <div class="item-desc">A massive bone-in veal loin — nearly a kilogram of meat. This is a sharing steak, carved tableside. Impressive and delicious.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Bistecca di Manzo di Razza Marchigiana (al kg, min 1kg)</div>
+      <div class="item-price">&euro;50/kg</div>
+    </div>
+    <div class="item-name-en">Marchigiana-breed beef steak — priced per kg, min. 1kg</div>
+    <div class="item-desc">The showpiece. Marchigiana is the prized local cattle breed of Le Marche — a large, white-coated animal that produces beautifully marbled, intensely flavoured beef. This is the regional equivalent of a Fiorentina or Chianina steak. Minimum one kilogram, priced by weight. If you want the ultimate local beef experience, this is it.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+    <span class="item-note">Local Breed &mdash; The Showpiece</span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- LE TAGLIATE                                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="tagliate">
+  <h2>Le Tagliate</h2>
+  <div class="section-en">Sliced Steak Platters</div>
+</div>
+<div class="section-intro">Tagliata — grilled beef sliced thin and fanned across the plate over a bed of toppings. A more sociable, flavour-forward way to enjoy steak than a single thick cut.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo al Rosmarino</div>
+      <div class="item-price">&euro;21</div>
+    </div>
+    <div class="item-name-en">Sliced beef with rosemary</div>
+    <div class="item-desc">The purist tagliata — just grilled beef, sliced, dressed with olive oil and fresh rosemary. Lets the quality of the meat speak.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo Rucola e Grana con Aceto Balsamico</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Sliced beef with arugula, Grana &amp; balsamic</div>
+    <div class="item-desc">The classic tagliata — sliced steak over a mound of peppery arugula, with shaved Grana Padano and a drizzle of aged balsamic. The Italian steakhouse standard, and it never gets old.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo Tricolore</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Tricolour sliced beef — arugula, radicchio, cherry tomatoes, walnuts &amp; pine nuts</div>
+    <div class="item-desc">Named for the Italian flag's colours (green arugula, red radicchio and tomatoes, white/cream of the nuts). A textural playground — bitter, sweet, crunchy, and meaty all at once.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo agli Agrumi</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Sliced beef with citrus, arugula, Grana &amp; pink peppercorn</div>
+    <div class="item-desc">A bright, aromatic variation — the citrus and pink peppercorn lift the richness of the beef, while arugula and Grana add their familiar punch. Light and elegant for a steak dish.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo Primavera</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Spring-style sliced beef — arugula, carrots, zucchini &amp; mushrooms</div>
+    <div class="item-desc">The freshest tagliata — sliced beef over a bed of seasonal spring vegetables. Lighter and more colourful than the classic versions.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo al Pecorino Fuso</div>
+      <div class="item-price">&euro;24</div>
+    </div>
+    <div class="item-name-en">Sliced beef with melted pecorino cheese</div>
+    <div class="item-desc">Grilled beef draped with a warm, melted pecorino sauce. The sharp, salty tang of the sheep's milk cheese is a powerful match for the charred beef. Indulgent and deeply satisfying.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo ai Funghi Porcini</div>
+      <div class="item-price">&euro;28</div>
+    </div>
+    <div class="item-name-en">Sliced beef with porcini mushrooms</div>
+    <div class="item-desc">The luxury tagliata — topped with saut&eacute;ed porcini mushrooms. Earthy, meaty, and utterly satisfying. The highest price point reflects the cost of quality porcini.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo con Crema di Pistacchio</div>
+      <div class="item-price">&euro;27</div>
+    </div>
+    <div class="item-name-en">Sliced beef with pistachio cream</div>
+    <div class="item-desc">An unexpected but wonderful pairing — grilled beef with a rich, nutty pistachio cream sauce. The sweetness and earthiness of Sicilian pistachio against charred beef is surprisingly harmonious.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Manzo con Cipolla Aromatizzata in Padella</div>
+      <div class="item-price">&euro;23</div>
+    </div>
+    <div class="item-name-en">Sliced beef with aromatic pan-fried onions</div>
+    <div class="item-desc">A tribute to the restaurant's namesake ingredient — the golden onion. Slowly caramelised onions flavoured with herbs, served over sliced grilled beef. Sweet, savoury, and deeply comforting.</div>
+    <div class="item-dots"><span class="dot dot-beef"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header">
+      <div class="item-name-it">Tagliata di Pollo con Rucola, Grana e Pachino</div>
+      <div class="item-price">&euro;13</div>
+    </div>
+    <div class="item-name-en">Sliced grilled chicken with arugula, Grana &amp; cherry tomatoes</div>
+    <div class="item-desc">The lighter, more affordable tagliata option — grilled chicken instead of beef, with the same classic arugula, Grana, and cherry tomato treatment. Good value.</div>
+    <div class="item-dots"><span class="dot dot-poultry"></span><span class="dot dot-cheese"></span></div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CONTORNI                                    -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="contorni">
+  <h2>Contorni</h2>
+  <div class="section-en">Side Dishes</div>
+</div>
+<div class="section-intro">Order these alongside your secondi — they come separately in Italy, never on the same plate.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Patate Arrosto</div><div class="item-price">&euro;5</div></div>
+    <div class="item-name-en">Roast potatoes</div>
+    <div class="item-desc">Crispy, golden roasted potatoes — a simple, essential pairing for grilled meats.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Patate Fritte della Nonna</div><div class="item-price">&euro;5</div></div>
+    <div class="item-name-en">Grandma's fried potatoes</div>
+    <div class="item-desc">Home-style fried potatoes — irregular, hand-cut, and crispy. "Della nonna" means they're made the old way, not uniform French fries.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Insalata Mista o Verde</div><div class="item-price">&euro;5</div></div>
+    <div class="item-name-en">Mixed salad or green salad</div>
+    <div class="item-desc">Simple dressed greens. "Mista" adds tomatoes, carrots, etc.; "verde" is just lettuce. Dressed at the table with olive oil and vinegar.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Olive all'Ascolana</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Ascoli-style stuffed fried olives</div>
+    <div class="item-desc">One of the most famous dishes of Le Marche — large green olives from Ascoli Piceno, stuffed with a spiced meat filling, breaded, and deep-fried. Crispy, salty, savoury little bombs. Absolutely essential to try while you're in the region.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Marche Classic — Must Try</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Crema Fritta</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Fried custard cubes</div>
+    <div class="item-desc">Another Marchigiano speciality — cubes of set custard (crema pasticcera), breaded and deep-fried. Crispy outside, warm and custardy inside. Served as a side dish, not a dessert — though it straddles the line deliciously. Often served alongside the olive ascolane as part of a "fritto misto."</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Marche Speciality</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Mozzarelline Fritte</div><div class="item-price">&euro;5</div></div>
+    <div class="item-name-en">Fried mozzarella bites</div>
+    <div class="item-desc">Small balls of mozzarella, breaded and deep-fried. Molten and stretchy inside, crunchy outside.</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Verdure in Pastella</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Batter-fried vegetables</div>
+    <div class="item-desc">Seasonal vegetables dipped in a light batter and fried. Expect zucchini, eggplant, artichoke, and whatever's in season.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Contorno Fritto Misto</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">Mixed fried platter — olives, custard, battered veg &amp; potatoes</div>
+    <div class="item-desc">The complete Marchigiano fry-up: olive ascolane, crema fritta, battered vegetables, and grandma's potatoes all on one plate. The ultimate side dish if you can't choose.</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Best of Everything</span>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Spinaci Saltati in Padella</div><div class="item-price">&euro;5</div></div>
+    <div class="item-name-en">Saut&eacute;ed spinach</div>
+    <div class="item-desc">Fresh spinach saut&eacute;ed in olive oil and garlic. A clean, green counterpoint to rich grilled meats.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Cicoria Saltata in Padella</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Saut&eacute;ed chicory greens</div>
+    <div class="item-desc">Wild chicory (cicoria) — a bitter green foraged from the countryside, saut&eacute;ed with garlic and chilli. More complex and interesting than spinach, with a pleasant bitterness that cuts through rich food.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Verdure Grigliate</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Grilled vegetables</div>
+    <div class="item-desc">Seasonal vegetables charred on the grill — typically zucchini, eggplant, peppers, and onions. Dressed with olive oil.</div>
+    <div class="item-dots"><span class="dot dot-veg"></span></div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- PIZZE BIANCHE                               -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="pizze-bianche">
+  <h2>Pizze Bianche con Mozzarella</h2>
+  <div class="section-en">White Pizzas — No Tomato Sauce, with Mozzarella</div>
+</div>
+<div class="section-intro">"Bianca" means no tomato sauce — just olive oil, mozzarella, and toppings. A lighter base that lets the ingredients shine. Gluten-free dough available (&euro;10–13). Add-ons: prosciutto crudo, speck, or bresaola +&euro;2; buffalo mozzarella +&euro;2.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Appetitosa</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">Frankfurter, sausage &amp; mushrooms</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Biancaneve</div><div class="item-price">&euro;11</div></div>
+    <div class="item-name-en">"Snow White" — buffalo mozzarella &amp; prosciutto crudo</div>
+    <div class="item-dots"><span class="dot dot-cured"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Brasil</div><div class="item-price">&euro;13</div></div>
+    <div class="item-name-en">Salmon, shrimp, cherry tomatoes, arugula &amp; pink sauce</div>
+    <div class="item-dots"><span class="dot dot-fish"></span><span class="dot dot-shellfish"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Bresaola</div><div class="item-price">&euro;10</div></div>
+    <div class="item-name-en">Air-dried beef, arugula, mushrooms &amp; Grana shavings</div>
+    <div class="item-dots"><span class="dot dot-beef"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Boscaiola</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">"Woodsman" — mushrooms, sausage &amp; roast potatoes</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Campana</div><div class="item-price">&euro;10</div></div>
+    <div class="item-name-en">Buffalo mozzarella, anchovies, basil &amp; oregano</div>
+    <div class="item-dots"><span class="dot dot-fish"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Carbonara</div><div class="item-price">&euro;10</div></div>
+    <div class="item-name-en">Pancetta, egg &amp; Grana shavings</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Carrettiera</div><div class="item-price">&euro;12</div></div>
+    <div class="item-name-en">Buffalo mozz, cherry tomatoes, porcini, arugula &amp; Grana</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span></div>
+    <span class="item-note">Recommended</span>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Crostino</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">Cooked ham &amp; mushrooms</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Estiva</div><div class="item-price">&euro;10</div></div>
+    <div class="item-name-en">"Summer" — buffalo mozz, cherry tomatoes, basil &amp; oregano</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Fratelli d'Italia</div><div class="item-price">&euro;10</div></div>
+    <div class="item-name-en">"Brothers of Italy" — buffalo mozz, speck, arugula &amp; cherry tomatoes</div>
+    <div class="item-dots"><span class="dot dot-cured"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Gorgonzola e Pere</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">Gorgonzola blue cheese &amp; pears</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Norcina</div><div class="item-price">&euro;11</div></div>
+    <div class="item-name-en">Sausage, mushrooms &amp; truffle</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-truffle"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Parmigiana</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">Eggplant, sausage, cherry tomatoes &amp; Grana shavings</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Primavera</div><div class="item-price">&euro;12</div></div>
+    <div class="item-name-en">"Spring" — arugula, shrimp, tuna &amp; cherry tomatoes</div>
+    <div class="item-dots"><span class="dot dot-shellfish"></span><span class="dot dot-fish"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Prosciutto Crudo</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">Dry-cured ham</div>
+    <div class="item-dots"><span class="dot dot-cured"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Quattro Formaggi</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">Four cheeses</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Rucola e Speck</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">Arugula, smoked prosciutto &amp; Grana shavings</div>
+    <div class="item-dots"><span class="dot dot-cured"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Pistacchia</div><div class="item-price">&euro;12</div></div>
+    <div class="item-name-en">Buffalo mozz, mortadella &amp; pistachio cream</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Pizza Chef</div><div class="item-price">&euro;10</div></div>
+    <div class="item-name-en">Spicy salami, artichokes, arugula &amp; chilli</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Pizza Salmone</div><div class="item-price">&euro;14</div></div>
+    <div class="item-name-en">Salmon, pink peppercorn, lemon &amp; parsley</div>
+    <div class="item-dots"><span class="dot dot-fish"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Sfiziosa</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">"Tempting" — smoked scamorza, pancetta, mushrooms &amp; onion</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Vegetariana</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">Zucchini, eggplant, spinach &amp; asparagus</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- PIZZE ROSSE                                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="pizze-rosse">
+  <h2>Pizze Rosse con Mozzarella</h2>
+  <div class="section-en">Red Pizzas — Tomato Sauce &amp; Mozzarella</div>
+</div>
+<div class="section-intro">Classic tomato-base pizzas. Gluten-free dough available (&euro;10–13). Baby pizzas for kids from &euro;6. Add-ons: prosciutto crudo, speck, or bresaola +&euro;2; buffalo mozzarella +&euro;2.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Margherita</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Tomato, mozzarella &amp; basil — the original</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Bufalina</div><div class="item-price">&euro;11</div></div>
+    <div class="item-name-en">Buffalo mozzarella &amp; basil</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Capricciosa</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">"The Capricious One" — mushrooms, cooked ham, artichokes &amp; olives</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Cipolla d'Oro</div><div class="item-price">&euro;10</div></div>
+    <div class="item-name-en">The house pizza — corn, frankfurter, spinach &amp; cooked ham</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Diavola</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">"The Devil" — spicy salami, olives &amp; chilli</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Napoli</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">Anchovies &amp; oregano</div>
+    <div class="item-dots"><span class="dot dot-fish"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Ortolana</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">"Garden" — spinach, mushrooms &amp; sliced tomato</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span><span class="dot dot-veg"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Pizza Bomba</div><div class="item-price">&euro;11</div></div>
+    <div class="item-name-en">"The Bomb" — peppers, spicy salami &amp; sausage</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Prosciutto Cotto e Funghi</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">Cooked ham &amp; mushrooms</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Prosciutto Crudo</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">Dry-cured ham</div>
+    <div class="item-dots"><span class="dot dot-cured"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Quattro Stagioni</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">"Four Seasons" — mushrooms, sausage, cooked ham &amp; artichokes (quartered)</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Tirolese</div><div class="item-price">&euro;9</div></div>
+    <div class="item-name-en">Speck (smoked prosciutto) &amp; smoked scamorza cheese</div>
+    <div class="item-dots"><span class="dot dot-cured"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Tonno e Cipolla</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">Tuna &amp; onion</div>
+    <div class="item-dots"><span class="dot dot-fish"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Wurstel</div><div class="item-price">&euro;8</div></div>
+    <div class="item-name-en">Frankfurter</div>
+    <div class="item-dots"><span class="dot dot-pork"></span><span class="dot dot-cheese"></span></div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Pizza Baby Margherita / Vari Gusti</div><div class="item-price">&euro;6–7</div></div>
+    <div class="item-name-en">Kids' pizza — margherita or choice of toppings</div>
+    <div class="item-dots"><span class="dot dot-cheese"></span></div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- DESSERT                                     -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="dessert">
+  <h2>Dessert e Frutta</h2>
+  <div class="section-en">Desserts &amp; Fruit</div>
+</div>
+<div class="section-intro">House-made classics alongside a remarkable range of "Elite Delight" artisanal buffalo-milk gelato spheres — each one a handcrafted frozen dessert with a hidden filling inside.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Tiramis&ugrave;</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Classic tiramis&ugrave;</div>
+    <div class="item-desc">The Italian classic — layers of espresso-soaked savoiardi biscuits and mascarpone cream, dusted with cocoa. House-made.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Zuppa Inglese</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Italian trifle</div>
+    <div class="item-desc">Despite the name ("English soup"), this is purely Italian — layers of Alchermes-soaked sponge with pastry cream and chocolate custard. A traditional Marchigiano dessert, richer and boozier than it looks.</div>
+    <span class="item-note">Local Tradition</span>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Panna Cotta</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Cooked cream — choice of: berries, caramel, chocolate, or Nutella</div>
+    <div class="item-desc">Silky set cream pudding with your choice of topping. A crowd-pleaser.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Crema Catalana</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Catalan cream — Italian cr&egrave;me br&ucirc;l&eacute;e</div>
+    <div class="item-desc">Creamy egg custard with a crackly caramelised sugar crust on top. Rich, elegant, and satisfying.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Cheesecake</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Cheesecake — choice of: berries or Nutella</div>
+    <div class="item-desc">Italian-style cheesecake, lighter and less dense than New York-style.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Tortino al Cioccolato</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Warm chocolate fondant cake</div>
+    <div class="item-desc">A small, warm chocolate cake with a molten centre. Break it open and the dark chocolate flows out. Best shared — or not.</div>
+    <span class="item-note">Recommended</span>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Zabaione della Nonna "Elite Delight"</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Buffalo milk gelato with zabaione, Strega liqueur &amp; amarena cherry</div>
+    <div class="item-desc">An artisanal frozen sphere made with buffalo milk gelato flavoured with torrone (nougat), filled with a zabaione cream spiked with Strega liqueur and an amarena cherry, coated in chocolate. Grandma's zabaione reimagined.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Pesto Pistacchio Salato "Elite Delight"</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Pistachio &amp; sweet salt gelato sphere</div>
+    <div class="item-desc">Buffalo milk gelato with pistachio pesto and dolce di Cervia salt, filled with white chocolate and pistachio, covered in toasted pistachios and raw pistachio cream. Salty-sweet perfection.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Il Tartufo di Acqualagna "Elite Delight"</div><div class="item-price">&euro;7</div></div>
+    <div class="item-name-en">Truffle gelato — buffalo milk fiordilatte with real Acqualagna white truffle</div>
+    <div class="item-desc">The most extraordinary dessert on the menu: buffalo milk fiordilatte gelato infused with real bianchetto truffle from Acqualagna (the truffle capital of Le Marche), coated in gold chocolate and black Cyprus salt. Savoury, sweet, earthy, and completely unique.</div>
+    <span class="item-note">Extraordinary</span>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Oro Nero "Elite Delight"</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Dark chocolate &amp; hazelnut gelato with liquid fondant centre</div>
+    <div class="item-desc">Buffalo milk gelato with chocolate and Giffoni hazelnuts, hiding a liquid "Oro Nero" dark fondant centre from Calabria, dusted with bitter cocoa. Intense and decadent.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Il Brillo Piccante "Elite Delight"</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Chocolate, chilli &amp; prosecco gelato with raspberry centre</div>
+    <div class="item-desc">Buffalo milk chocolate gelato with Calabrian chilli and Valdobbiadene prosecco, raspberry centre, coated in ruby chocolate with forest fruits. Spicy, boozy, and playful.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Moka Express "Elite Delight"</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Coffee &amp; vanilla gelato in white chocolate</div>
+    <div class="item-desc">Buffalo milk espresso gelato with vanilla and moka coffee hearts, coated in white chocolate. Named after the iconic Italian stovetop coffee maker.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Choco Rhum "Elite Delight"</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Chocolate &amp; rum gelato with orange</div>
+    <div class="item-desc">Chocolate buffalo milk gelato with rum and orange fondant centre, chocolate-coated.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Ginger Lemon "Elite Delight"</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Lemon &amp; ginger gelato with citrus cream centre</div>
+    <div class="item-desc">Buffalo milk lemon gelato with ginger, citrus cream centre, coated in lemon cookies. Bright and refreshing.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Noccio-Tella / Passion Bufala / Maracaibo / Fior di Bufala / Cookies &amp; Caramel</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Additional Elite Delight flavours — hazelnut, passion fruit/mango, tropical, strawberry, cookies &amp; caramel</div>
+    <div class="item-desc">Ask your server which Elite Delight flavours are available tonight. All are made with buffalo milk gelato and feature a hidden filling.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Semifreddo Senza Glutine</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Gluten-free semifreddo</div>
+    <div class="item-desc">A frozen mousse-like dessert — lighter than gelato, gluten-free.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Sorbetto Limone</div><div class="item-price">&euro;3.50</div></div>
+    <div class="item-name-en">Lemon sorbet</div>
+    <div class="item-desc">Palate cleanser or light dessert. Tart, icy, refreshing.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Ananas / Frutta di Stagione</div><div class="item-price">&euro;5–6</div></div>
+    <div class="item-name-en">Pineapple or seasonal fruit</div>
+    <div class="item-desc">Fresh fruit to close the meal simply.</div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- WINE: BOLLICINE                             -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="bollicine">
+  <h2>Le Bollicine</h2>
+  <div class="section-en">Sparkling Wines</div>
+</div>
+<div class="section-intro">Italian sparkling wines from the Marche, Franciacorta, and Trentino — from easy-drinking Prosecco to serious Metodo Classico bottles that rival Champagne. Look for the local Marchigiano sparklers made from Pecorino and Passerina grapes.</div>
+<div class="menu-list">
+
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Pecorino Spumante Brut &mdash; Cherri</div><div class="wine-price">&euro;18</div></div>
+    <div class="wine-region">Marche &middot; Metodo Charmat</div>
+    <div class="wine-desc">Sparkling wine made from the local Pecorino grape (not the cheese!). Crisp, citrusy, and minerally. A wonderful aperitivo that's uniquely Marchigiano. Great value.</div>
+    <span class="wine-note">Local &middot; Best Value</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Passerina Spumante Brut &mdash; Velenosi</div><div class="wine-price">&euro;20</div></div>
+    <div class="wine-region">Marche &middot; Metodo Charmat</div>
+    <div class="wine-desc">Made from Passerina, another indigenous Marche grape. Floral, delicate, with white peach and apple notes. Light and refreshing.</div>
+    <span class="wine-note">Local</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Brut Riserva Metodo Classico &mdash; Garofoli</div><div class="wine-price">&euro;28</div></div>
+    <div class="wine-region">Marche &middot; Metodo Classico</div>
+    <div class="wine-desc">A serious traditional-method sparkling from Garofoli, one of the Marche's most respected producers. Toasty, complex, with fine bubbles. Comparable to a good Franciacorta.</div>
+    <span class="wine-note">Local &middot; Recommended</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">LH2 Extra Brut &mdash; Umani Ronchi</div><div class="wine-price">&euro;25</div></div>
+    <div class="wine-region">Marche &middot; Metodo Classico</div>
+    <div class="wine-desc">Extra Brut (very dry) Metodo Classico from another top Marche house. Lean, precise, mineral-driven. Great with antipasti.</div>
+    <span class="wine-note">Local</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Miol Prosecco DOC Treviso &mdash; Bortolomiol</div><div class="wine-price">&euro;15</div></div>
+    <div class="wine-region">Veneto</div>
+    <div class="wine-desc">Easy-drinking Prosecco. Light, fruity, and festive. The most affordable bubbles on the list.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Franciacorta DOCG Alma Gran Cuv&eacute;e &mdash; Bellavista</div><div class="wine-price">&euro;40</div></div>
+    <div class="wine-region">Lombardia &middot; Metodo Classico</div>
+    <div class="wine-desc">Bellavista is one of Franciacorta's finest houses. Rich, creamy, with brioche and citrus notes. Italy's answer to Champagne.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Franciacorta DOCG Essence Nature &mdash; Antica Fratta</div><div class="wine-price">&euro;35</div></div>
+    <div class="wine-region">Lombardia &middot; Metodo Classico</div>
+    <div class="wine-desc">Zero-dosage Franciacorta — no added sugar, so it's bone-dry and pure. Mineral, chalky, elegant.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Trento DOC Perl&eacute; Brut &mdash; Giulio Ferrari</div><div class="wine-price">&euro;45</div></div>
+    <div class="wine-region">Trentino &middot; Metodo Classico</div>
+    <div class="wine-desc">Ferrari is the benchmark for Trento DOC sparkling. The Perl&eacute; is their prestige line — Chardonnay-based, complex, with extended lees ageing. World-class.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Trento DOC Riserva del Fondatore &mdash; Giulio Ferrari</div><div class="wine-price">&euro;170</div></div>
+    <div class="wine-region">Trentino &middot; Metodo Classico</div>
+    <div class="wine-desc">One of Italy's greatest sparkling wines. 10+ years on lees, extraordinary complexity. Regularly rated alongside the finest Champagnes. A special-occasion bottle.</div>
+    <span class="wine-note">Iconic</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Franciacorta DOCG Annamaria Clementi Riserva Dosaggio Zero &mdash; Ca' del Bosco</div><div class="wine-price">&euro;150</div></div>
+    <div class="wine-region">Lombardia &middot; Metodo Classico</div>
+    <div class="wine-desc">Ca' del Bosco's top cuvée. One of the most celebrated Italian sparkling wines — extraordinary depth and precision.</div>
+    <span class="wine-note">Iconic</span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CHAMPAGNE                                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="champagne">
+  <h2>Champagne</h2>
+  <div class="section-en">French Champagne</div>
+</div>
+<div class="section-intro">A serious Champagne list from a small restaurant in Ancona — from entry-level Morel at &euro;50 to Krug, Dom P&eacute;rignon, and Salon. Impressively curated.</div>
+<div class="menu-list">
+
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Champagne Morel Brut Reserve</div><div class="wine-price">&euro;50</div></div>
+    <div class="wine-desc">A grower Champagne — good quality, best value on the list.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Lanson Brut le Black Label</div><div class="wine-price">&euro;60</div></div>
+    <div class="wine-desc">Fresh, citrusy, non-malolactic Champagne. Clean and crisp.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Pommery Brut Apanage</div><div class="wine-price">&euro;70</div></div>
+    <div class="wine-desc">Elegant and refined, with a higher proportion of reserve wines.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">La Cuv&eacute;e Brut &mdash; Laurent Perrier</div><div class="wine-price">&euro;75</div></div>
+    <div class="wine-desc">Chardonnay-forward and fresh. A reliable grande marque.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Pol Roger Brut Reserve</div><div class="wine-price">&euro;80</div></div>
+    <div class="wine-desc">Winston Churchill's favourite Champagne house. Elegant, balanced, and refined.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Ruinart Blanc de Blancs / Ros&eacute;</div><div class="wine-price">&euro;140</div></div>
+    <div class="wine-desc">Pure Chardonnay elegance from the oldest Champagne house. Silky and refined.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">La Grande Dame Brut &mdash; Veuve Clicquot</div><div class="wine-price">&euro;250</div></div>
+    <div class="wine-desc">Veuve's prestige cuvée. Rich, powerful, with great ageing potential.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Dom P&eacute;rignon Brut Vintage</div><div class="wine-price">&euro;340</div></div>
+    <div class="wine-desc">The iconic prestige cuvée. Only made in exceptional years.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Krug Grande Cuv&eacute;e Extra Brut</div><div class="wine-price">&euro;350</div></div>
+    <div class="wine-desc">Blended from multiple vintages and parcels. Extraordinarily complex.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Cristal Grand Cru Brut Vintage &mdash; Louis Roederer</div><div class="wine-price">&euro;350</div></div>
+    <div class="wine-desc">Originally created for the Tsar. Precise, luminous, ethereal.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Sir Winston Churchill &mdash; Pol Roger</div><div class="wine-price">&euro;380</div></div>
+    <div class="wine-desc">Pol Roger's prestige cuvée, named for their most famous customer. Structured, powerful, and long-lived.</div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- WHITE WINES                                 -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="bianchi">
+  <h2>La Carta dei Vini: Bianchi</h2>
+  <div class="section-en">White Wines — Marche &amp; National</div>
+</div>
+<div class="section-intro">The Marche's white wines are world-class. Verdicchio is the star — a versatile, age-worthy grape that rivals the best Italian whites. Also look for Pecorino (the grape) and Passerina, both native to this region and gaining international recognition.</div>
+<div class="menu-list">
+
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Verdicchio dei Castelli di Jesi DOC "Macrina" &mdash; Garofoli</div><div class="wine-price">&euro;12</div></div>
+    <div class="wine-region">Marche &middot; Verdicchio</div>
+    <div class="wine-desc">Entry-level Verdicchio from a top producer. Fresh, mineral, with green apple and almond notes. Exceptional value — a perfect house white.</div>
+    <span class="wine-note">Best Value</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Falerio DOC "Palazzi" &mdash; Saladini Pilastri</div><div class="wine-price">&euro;13</div></div>
+    <div class="wine-region">Marche &middot; Blend</div>
+    <div class="wine-desc">A Marchigiano white blend (Trebbiano, Passerina, Pecorino). Light, easy-drinking, and inexpensive.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Offida DOCG Passerina "Radiosa" &mdash; Cherri</div><div class="wine-price">&euro;14</div></div>
+    <div class="wine-region">Marche &middot; Passerina</div>
+    <div class="wine-desc">100% Passerina — a floral, delicate indigenous grape. White peach, citrus blossom, light and refreshing. Great with seafood or light starters.</div>
+    <span class="wine-note">Local Grape</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Verdicchio di Matelica DOC &mdash; Bisci</div><div class="wine-price">&euro;15</div></div>
+    <div class="wine-region">Marche &middot; Verdicchio</div>
+    <div class="wine-desc">Matelica is the inland, higher-altitude Verdicchio zone — wines tend to be more mineral, crisp, and structured than the coastal Castelli di Jesi. Bisci is a benchmark producer. Excellent.</div>
+    <span class="wine-note">Recommended</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Offida DOCG Pecorino "Altissimo" &mdash; Cherri</div><div class="wine-price">&euro;16</div></div>
+    <div class="wine-region">Marche &middot; Pecorino</div>
+    <div class="wine-desc">100% Pecorino grape — nothing to do with the cheese. Full-bodied, aromatic, with herbal and citrus notes. Pecorino is having a real moment in Italian wine. Bold enough to pair with pasta and white meats.</div>
+    <span class="wine-note">Local Grape &middot; Trending</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Offida DOCG Pecorino "Colle Vecchio" &mdash; Tenute Cocci Grifoni</div><div class="wine-price">&euro;18</div></div>
+    <div class="wine-region">Marche &middot; Pecorino</div>
+    <div class="wine-desc">Cocci Grifoni essentially saved the Pecorino grape from extinction in the 1980s. This is their flagship — complex, structured, age-worthy. A piece of Marche wine history.</div>
+    <span class="wine-note">Historic Producer</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Verdicchio dei Castelli di Jesi DOC "Podium" &mdash; Garofoli</div><div class="wine-price">&euro;20</div></div>
+    <div class="wine-region">Marche &middot; Verdicchio</div>
+    <div class="wine-desc">One of the benchmark Verdicchios — rich, complex, with notes of almond, honey, and citrus. Ages beautifully. If you drink one white wine in the Marche, make it this one.</div>
+    <span class="wine-note">Benchmark &middot; Recommended</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Verdicchio di Matelica Riserva DOCG "Mat&egrave;rga" &mdash; Provima</div><div class="wine-price">&euro;20</div></div>
+    <div class="wine-region">Marche &middot; Verdicchio</div>
+    <div class="wine-desc">Riserva level — extended ageing adds depth and complexity. Mineral, savoury, with a long finish.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Verdicchio di Matelica Riserva DOCG "Cambrugiano" &mdash; Belisario</div><div class="wine-price">&euro;22</div></div>
+    <div class="wine-region">Marche &middot; Verdicchio</div>
+    <div class="wine-desc">Award-winning Verdicchio Riserva from the Matelica zone. Powerful, complex, with herbal and mineral notes.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Verdicchio dei Castelli di Jesi Riserva DOCG "Serra Fiorese" &mdash; Garofoli</div><div class="wine-price">&euro;22</div></div>
+    <div class="wine-region">Marche &middot; Verdicchio</div>
+    <div class="wine-desc">Garofoli's top Verdicchio. Partially barrel-fermented, rich and layered. A serious, age-worthy white.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Verdicchio dei Castelli di Jesi Riserva DOCG "Utopia" &mdash; Montecappone</div><div class="wine-price">&euro;34</div></div>
+    <div class="wine-region">Marche &middot; Verdicchio</div>
+    <div class="wine-desc">The most premium Verdicchio on the list. Extended ageing, extraordinary depth. A wine to prove that Verdicchio belongs in conversations about great Italian whites.</div>
+    <span class="wine-note">Splurge</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Sauvignon "Animale Celeste" &mdash; Santa Barbara</div><div class="wine-price">&euro;20</div></div>
+    <div class="wine-region">Marche &middot; Sauvignon Blanc</div>
+    <div class="wine-desc">An unusual Marche Sauvignon Blanc. Aromatic, tropical, with herbal notes. A departure from the local grapes if you fancy something different.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Gew&uuml;rztraminer &mdash; St. Michael Eppan</div><div class="wine-price">&euro;22</div></div>
+    <div class="wine-region">Alto Adige</div>
+    <div class="wine-desc">Aromatic, with lychee, rose petal, and spice. From one of Alto Adige's top cooperatives.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">M&uuml;ller Thurgau &mdash; Villa Corniole</div><div class="wine-price">&euro;17</div></div>
+    <div class="wine-region">Trentino</div>
+    <div class="wine-desc">Mountain-grown M&uuml;ller Thurgau from the Cembra Valley. Light, floral, crisp.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Pinot Grigio Ramato &mdash; Villa Corniole</div><div class="wine-price">&euro;20</div></div>
+    <div class="wine-region">Trentino</div>
+    <div class="wine-desc">"Ramato" means copper-coloured — this Pinot Grigio gets brief skin contact, giving it a salmon hue and more body and texture than typical PG. Interesting.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Ribolla Gialla &mdash; Scubla</div><div class="wine-price">&euro;22</div></div>
+    <div class="wine-region">Friuli Venezia Giulia</div>
+    <div class="wine-desc">An ancient grape of Friuli — crisp, mineral, with notes of green apple and white flowers.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Sauvignon &mdash; Scubla</div><div class="wine-price">&euro;22</div></div>
+    <div class="wine-region">Friuli Venezia Giulia</div>
+    <div class="wine-desc">Friulian Sauvignon — more restrained and mineral than New World examples.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Trebbiano d'Abruzzo "Fonte Cupa" &mdash; Camillo Montori</div><div class="wine-price">&euro;18</div></div>
+    <div class="wine-region">Abruzzo</div>
+    <div class="wine-desc">Trebbiano from just south in Abruzzo. A more serious expression of a grape often dismissed as simple.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rieling Riserva "Campo della Fojada" &mdash; Travaglino</div><div class="wine-price">&euro;26</div></div>
+    <div class="wine-region">Lombardia &middot; Oltrep&ograve; Pavese</div>
+    <div class="wine-desc">Riesling from northern Italy — a surprising and excellent expression. Mineral, petrol notes, age-worthy.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Colli Maceratesi DOC Ribona &mdash; Podere I Sabbioni</div><div class="wine-price">&euro;16</div></div>
+    <div class="wine-region">Marche &middot; Ribona (Maceratino)</div>
+    <div class="wine-desc">Ribona (also called Maceratino) is an extremely rare indigenous grape of the Macerata hills. If you want to drink something truly unique to this area, this is it.</div>
+    <span class="wine-note">Ultra-Local &middot; Rare Grape</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Chardonnay "La Signorina" &mdash; Provima</div><div class="wine-price">&euro;16</div></div>
+    <div class="wine-region">Marche &middot; Chardonnay</div>
+    <div class="wine-desc">A Marchigiano take on Chardonnay — likely unoaked, fresh, and clean.</div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- RED WINES                                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="rossi">
+  <h2>Carta dei Vini: Rossi</h2>
+  <div class="section-en">Red Wines — Marche &amp; National</div>
+</div>
+<div class="section-intro">The local reds to know: <strong>Rosso Conero</strong> (Montepulciano from the hills right around Ancona), <strong>Rosso Piceno</strong> (Montepulciano-Sangiovese blends from the south), and <strong>Lacrima di Morro d'Alba</strong> (a beautifully aromatic, floral red unique to a tiny zone nearby). The national selection includes some legendary Super Tuscans.</div>
+<div class="menu-list">
+
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOC "Serrano" &mdash; Umani Ronchi</div><div class="wine-price">&euro;13</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">Entry-level Rosso Conero from a major Marche producer. Juicy, medium-bodied, with cherry and plum. The most affordable local red.</div>
+    <span class="wine-note">Local &middot; Best Value</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOC "Piancarda" &mdash; Garofoli</div><div class="wine-price">&euro;14</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">Soft, approachable Rosso Conero. Dark fruit, gentle tannins. Easy-drinking with pasta or pizza.</div>
+    <span class="wine-note">Local</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOC "Julius" &mdash; Strologo</div><div class="wine-price">&euro;15</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">A small, quality-focused producer. More structured and characterful than the entry-level options. Excellent with grilled meats.</div>
+    <span class="wine-note">Local &middot; Recommended</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOC &mdash; Fattoria Le Terrazze</div><div class="wine-price">&euro;15</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">Le Terrazze is a cult Conero producer. Their base wine is already impressive — dark, concentrated, with great structure.</div>
+    <span class="wine-note">Local &middot; Cult Producer</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Lacrima di Morro d'Alba "Il Rustico" &mdash; Vicari</div><div class="wine-price">&euro;15</div></div>
+    <div class="wine-region">Marche &middot; Lacrima &middot; Morro d'Alba</div>
+    <div class="wine-desc">Lacrima is one of Italy's most unusual red grapes — intensely aromatic, with rose petal, violets, and wild strawberry. The name means "tear" because the ripe grapes weep juice through the skin. Only grown in a tiny area near Ancona. A must-try for wine lovers.</div>
+    <span class="wine-note">Unique Local Grape &middot; Must Try</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Lacrima di Morro d'Alba DOC &mdash; Stefano Mancinelli</div><div class="wine-price">&euro;16</div></div>
+    <div class="wine-region">Marche &middot; Lacrima</div>
+    <div class="wine-desc">Mancinelli is one of the defining producers of Lacrima. Floral, perfumed, with surprising depth. Pairs beautifully with charcuterie and crescia.</div>
+    <span class="wine-note">Recommended</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Piceno DOC Superiore "Brecciarolo" &mdash; Velenosi</div><div class="wine-price">&euro;15</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano/Sangiovese</div>
+    <div class="wine-desc">Solid Rosso Piceno Superiore from a major producer. Medium-bodied, food-friendly, good value.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOCG Riserva "Grosso Agontano" &mdash; Garofoli</div><div class="wine-price">&euro;30</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">One of the top Rosso Conero Riservas. Powerful, concentrated, with dark fruit and spice. Aged in oak. A serious wine for serious meat dishes.</div>
+    <span class="wine-note">Local &middot; Top Tier</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOCG Riserva "C&ugrave;maro" &mdash; Umani Ronchi</div><div class="wine-price">&euro;30</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">Umani Ronchi's flagship Conero. Dense, complex, with black cherry and leather notes. One of the defining wines of the Conero appellation.</div>
+    <span class="wine-note">Local &middot; Top Tier</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOCG Riserva "Sassi Neri" &mdash; Fattoria Le Terrazze</div><div class="wine-price">&euro;30</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">Le Terrazze's reserve bottling. Named after the black stones of Monte Conero. Concentrated, brooding, with great ageing potential.</div>
+    <span class="wine-note">Local &middot; Top Tier</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOCG Riserva "Dorico" &mdash; Moroder</div><div class="wine-price">&euro;35</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">Named after the ancient Greek name for Ancona's harbour. Rich, elegant Riserva.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Piceno DOC Superiore "Roggio del Filare" &mdash; Velenosi</div><div class="wine-price">&euro;40</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano/Sangiovese</div>
+    <div class="wine-desc">Velenosi's top wine — a powerful, oak-aged Rosso Piceno that competes with the best Marche reds.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso Conero DOC "Il Varano" &mdash; Serenelli</div><div class="wine-price">&euro;50</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano &middot; Ancona</div>
+    <div class="wine-desc">A tiny-production, artisanal Conero. Concentrated and characterful.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Offida Rosso DOCG "Ludi" &mdash; Velenosi</div><div class="wine-price">&euro;44</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano/Cabernet</div>
+    <div class="wine-desc">A prestigious Offida Rosso blend. Rich, polished, and complex.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Marche IGT Rosso "Kurni" &mdash; Oasi degli Angeli</div><div class="wine-price">&euro;130</div></div>
+    <div class="wine-region">Marche &middot; Montepulciano</div>
+    <div class="wine-desc">A cult wine — 100% Montepulciano, incredibly concentrated, from absurdly low yields. One of Italy's most sought-after reds. If you want to experience the extreme potential of Marche winemaking, this is it.</div>
+    <span class="wine-note">Cult Wine</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Marche IGT Rosso "Afro" &mdash; Serenelli</div><div class="wine-price">&euro;180</div></div>
+    <div class="wine-region">Marche</div>
+    <div class="wine-desc">The most expensive Marche red on the list. Ultra-limited production.</div>
+  </div>
+
+  <div class="wine-item" style="margin-top: 1rem; padding-top: 1.5rem; border-top: 2px solid var(--border);">
+    <div class="wine-header"><div class="wine-name" style="font-size:0.9rem; color: var(--text-muted);">National Highlights</div></div>
+  </div>
+
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Langhe DOC Nebbiolo "Il Principe" &mdash; Michele Chiarlo</div><div class="wine-price">&euro;22</div></div>
+    <div class="wine-region">Piemonte &middot; Nebbiolo</div>
+    <div class="wine-desc">Baby Barolo territory — Nebbiolo with rose, tar, and cherry. Elegant and aromatic.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Chianti Classico DOCG Riserva "Novecento" &mdash; Dievole</div><div class="wine-price">&euro;32</div></div>
+    <div class="wine-region">Toscana &middot; Sangiovese</div>
+    <div class="wine-desc">Classic Chianti Riserva — cherry, leather, and dried herbs. A reliable Tuscan red.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Amarone della Valpolicella Classico DOCG "Costasera" &mdash; Masi</div><div class="wine-price">&euro;60</div></div>
+    <div class="wine-region">Veneto</div>
+    <div class="wine-desc">Made from dried grapes — rich, powerful, with raisin, chocolate, and spice. A warm, generous wine for cold evenings and big flavours.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Bolgheri DOC "Tignanello" &mdash; Antinori</div><div class="wine-price">&euro;110</div></div>
+    <div class="wine-region">Toscana &middot; Sangiovese/Cabernet</div>
+    <div class="wine-desc">The original Super Tuscan — the wine that broke the rules and launched a revolution in Italian winemaking.</div>
+    <span class="wine-note">Iconic</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Bolgheri DOC "Sassicaia" &mdash; Tenuta San Guido</div><div class="wine-price">&euro;450</div></div>
+    <div class="wine-region">Toscana &middot; Cabernet Sauvignon/Franc</div>
+    <div class="wine-desc">Italy's most famous wine. First produced in 1968, now with its own appellation. Regularly one of the world's highest-rated wines.</div>
+    <span class="wine-note">Legendary</span>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- ROSATI                                      -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="rosati">
+  <h2>La Carta dei Vini: Rosati</h2>
+  <div class="section-en">Ros&eacute; Wines</div>
+</div>
+<div class="section-intro">Three ros&eacute;s — including two Cerasuolo d'Abruzzo, Italy's finest ros&eacute; appellation, made from Montepulciano grapes.</div>
+<div class="menu-list">
+
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">"Chiamami Quando Piove" Cerasuolo d'Abruzzo Bio DOC &mdash; Valori</div><div class="wine-price">&euro;18</div></div>
+    <div class="wine-region">Abruzzo &middot; Montepulciano &middot; Organic</div>
+    <div class="wine-desc">The name means "Call Me When It Rains" — a lovely organic Cerasuolo. Deep cherry-pink colour, with strawberry and herb notes. More body and structure than Proven&ccedil;al ros&eacute;. Perfect for a warm evening.</div>
+    <span class="wine-note">Organic &middot; Recommended</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">K-Volve Marche IGT Rosato &mdash; Garofoli</div><div class="wine-price">&euro;25</div></div>
+    <div class="wine-region">Marche</div>
+    <div class="wine-desc">Local Marchigiano ros&eacute; from Garofoli. Likely a more refined, structured style.</div>
+    <span class="wine-note">Local</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Villa Gemma Cerasuolo d'Abruzzo DOC Superiore &mdash; Masciarelli</div><div class="wine-price">&euro;28</div></div>
+    <div class="wine-region">Abruzzo &middot; Montepulciano</div>
+    <div class="wine-desc">Masciarelli's flagship ros&eacute; — widely considered one of Italy's best. Vibrant, complex, and food-friendly.</div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- DOLCI E PASSITI                             -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="passiti">
+  <h2>Vini Dolci e Passiti</h2>
+  <div class="section-en">Sweet &amp; Dessert Wines</div>
+</div>
+<div class="section-intro">Dessert wines from across Italy, plus some fascinating natural and unfiltered wines. The Vino e Visciole is a unique Marchigiano specialty — wine infused with wild sour cherries.</div>
+<div class="menu-list">
+
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Vino e Visciole &mdash; Vicari</div><div class="wine-price">&euro;15</div></div>
+    <div class="wine-region">Marche &middot; 50cl</div>
+    <div class="wine-desc">Wine macerated with visciole (wild sour cherries) — a centuries-old Marchigiano tradition. Sweet, tart, deeply fruity. Pour it over vanilla gelato or sip alongside chocolate desserts. Absolutely unique to this region.</div>
+    <span class="wine-note">Marche Only &middot; Must Try</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Verdicchio di Matelica "Geg&egrave; D'Antan" &mdash; Cavalieri (non filtrato)</div><div class="wine-price">&euro;18</div></div>
+    <div class="wine-region">Marche &middot; Verdicchio &middot; Unfiltered</div>
+    <div class="wine-desc">Not a dessert wine — an unfiltered, natural-style Verdicchio. Skin-macerated, aged 12 months in steel, bottled without stabilisation or filtration. A rustic, authentic expression of winemaking "the old way."</div>
+    <span class="wine-note">Natural Wine</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Rosso "Nudo" &mdash; Capecci Roberto (no added sulphites)</div><div class="wine-price">&euro;29</div></div>
+    <div class="wine-region">Marche &middot; No Added Sulphites</div>
+    <div class="wine-desc">A true natural wine — indigenous yeast fermentation, no temperature control, no fining, no filtering, no added sulphites (under 10 mg/L). Raw and alive. For natural wine enthusiasts.</div>
+    <span class="wine-note">Natural Wine</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Dorato Marche IGT Passito &mdash; Garofoli</div><div class="wine-price">&euro;20</div></div>
+    <div class="wine-region">Marche &middot; 50cl</div>
+    <div class="wine-desc">Local Marchigiano passito — made from dried grapes, sweet and honeyed. Pairs with cheese or almond-based desserts.</div>
+    <span class="wine-note">Local</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">La Caudrina Moscato d'Asti DOCG</div><div class="wine-price">&euro;20</div></div>
+    <div class="wine-region">Piemonte</div>
+    <div class="wine-desc">Gently sparkling, low-alcohol (5.5%), intensely aromatic Moscato. Peach, apricot, and orange blossom. Light and festive — lovely with fruit desserts.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Moscato d'Asti DOCG &mdash; Ceretto (I Vignaioli di Santo Stefano)</div><div class="wine-price">&euro;22</div></div>
+    <div class="wine-region">Piemonte</div>
+    <div class="wine-desc">A benchmark Moscato d'Asti from a prestigious Piemontese producer.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Maximo Marche Bianco IGT Muffato &mdash; Umani Ronchi</div><div class="wine-price">&euro;30</div></div>
+    <div class="wine-region">Marche &middot; 37.5cl</div>
+    <div class="wine-desc">"Muffato" means the grapes were affected by noble rot (botrytis) — like Sauternes but Italian. Lusciously sweet with honey, apricot, and candied citrus.</div>
+    <span class="wine-note">Local &middot; Noble Rot</span>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Angelorum Recioto della Valpolicella Classico DOCG &mdash; Masi</div><div class="wine-price">&euro;35</div></div>
+    <div class="wine-region">Veneto &middot; 37.5cl</div>
+    <div class="wine-desc">Sweet red wine from dried Corvina grapes — Amarone's sweeter sibling. Rich, with dark cherry and chocolate.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Passito di Noto DOC &mdash; Planeta</div><div class="wine-price">&euro;35</div></div>
+    <div class="wine-region">Sicilia &middot; 50cl</div>
+    <div class="wine-desc">Sicilian Moscato passito. Lush tropical sweetness with apricot and orange blossom.</div>
+  </div>
+  <div class="wine-item">
+    <div class="wine-header"><div class="wine-name">Passito di Pantelleria DOC &mdash; Florio</div><div class="wine-price">&euro;42</div></div>
+    <div class="wine-region">Sicilia &middot; Pantelleria &middot; 50cl</div>
+    <div class="wine-desc">From the volcanic island of Pantelleria between Sicily and Tunisia. Made from sun-dried Zibibbo (Muscat of Alexandria). Intensely sweet, with dried fig, date, and citrus peel. One of the Mediterranean's great dessert wines.</div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CRAFT BEER                                  -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="birre">
+  <h2>Birre Artigianali in Bottiglia</h2>
+  <div class="section-en">Craft Beers in Bottle — all &euro;6</div>
+</div>
+<div class="section-intro">A thoughtful selection of craft beers: German pilsners, Belgian-style abbey ales, and Italian craft brews from 61cento and Theresianer. All priced at &euro;6.</div>
+<div class="menu-list">
+
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Ganter Pils (50cl, 4.9%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">German Pilsner — crisp, bitter, bright gold</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Limburgse Witte (33cl, 5%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Belgian-style wheat beer — coriander &amp; spice, pale, hazy</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Herkenrode Vesper (33cl, 9%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Belgian abbey tripel — strong, golden, hoppy. 9% — sip slowly!</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">61cento Mayo (33cl, 6%) Senza Glutine</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Italian craft gluten-free saison — light, delicate, lightly hopped</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">61cento Elk (33cl, 5.8%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Italian craft American amber lager — hoppy, malty, copper-coloured</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">61cento Kisa (33cl, 6.5%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Italian craft white IPA — wheat-based IPA with US &amp; Australian hops. Fresh and intense.</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Theresianer Guglielmo (50cl, 4.9%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Italian unfiltered lager — light, aromatic, and hazy</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Theresianer Amleto (50cl, 6.5%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Italian amber unfiltered lager — German-style, malty, gently bitter</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Theresianer Cordelia (50cl, 5.8%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">Italian IPA with oats — round body, hoppy, bitter finish</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Ganter Lager (50cl, 4.8%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">German Helles-style lager — gold, malty, easy-drinking</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Ganter Wodan DoppelBock (50cl, 7.5%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">German DoppelBock — ruby, strong, rich and malty. 7.5%</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header"><div class="item-name-it">Ganter Weizen Hefehell (50cl, 5.4%)</div><div class="item-price">&euro;6</div></div>
+    <div class="item-name-en">German wheat beer (Weizen) — cloudy, banana &amp; clove notes</div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- BEVANDE                                     -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="bevande">
+  <h2>Bevande</h2>
+  <div class="section-en">Drinks</div>
+</div>
+<div class="menu-list">
+  <div class="drink-item"><div class="drink-name">Acqua minerale (0.75L)</div><div class="drink-price">&euro;2</div></div>
+  <div class="drink-item"><div class="drink-name">Vino della casa (0.75L) <span class="drink-en">&mdash; House wine, bottle</span></div><div class="drink-price">&euro;10</div></div>
+  <div class="drink-item"><div class="drink-name">Vino della casa (&frac12;L)</div><div class="drink-price">&euro;5.50</div></div>
+  <div class="drink-item"><div class="drink-name">Vino della casa (&frac14;L)</div><div class="drink-price">&euro;4.50</div></div>
+  <div class="drink-item"><div class="drink-name">Vino a calice <span class="drink-en">&mdash; Wine by the glass</span></div><div class="drink-price">&euro;5–7</div></div>
+  <div class="drink-item"><div class="drink-name">Coca Cola / Zero / Fanta / Sprite (lattina)</div><div class="drink-price">&euro;3</div></div>
+  <div class="drink-item"><div class="drink-name">Coca Cola 1L (bottiglia in vetro)</div><div class="drink-price">&euro;7</div></div>
+  <div class="drink-item"><div class="drink-name">Birra bionda alla spina &mdash; <span class="drink-en">Blonde draught beer</span></div><div class="drink-price">&euro;3 / 5 / 9</div></div>
+  <div class="drink-item"><div class="drink-name">Birra rossa alla spina &mdash; <span class="drink-en">Red draught beer</span></div><div class="drink-price">&euro;3.50 / 5.50 / 10</div></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CAFFE                                       -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="section-header" id="caffe">
+  <h2>Per Finire...</h2>
+  <div class="section-en">To Finish — Coffee &amp; Digestivi</div>
+</div>
+<div class="section-intro">End with an espresso and a digestivo. A "caffè corretto" is espresso "corrected" with a shot of grappa, sambuca, or other spirit — the classic Italian nightcap.</div>
+<div class="menu-list">
+  <div class="drink-item"><div class="drink-name">Caff&egrave; <span class="drink-en">&mdash; Espresso</span></div><div class="drink-price">&euro;1.50</div></div>
+  <div class="drink-item"><div class="drink-name">Caff&egrave; corretto <span class="drink-en">&mdash; Espresso with a shot of spirits</span></div><div class="drink-price">&euro;1.80</div></div>
+  <div class="drink-item"><div class="drink-name">Orzo <span class="drink-en">&mdash; Barley coffee (caffeine-free)</span></div><div class="drink-price">&euro;1.50</div></div>
+  <div class="drink-item"><div class="drink-name">Ginseng <span class="drink-en">&mdash; Ginseng coffee</span></div><div class="drink-price">&euro;2.50</div></div>
+  <div class="drink-item"><div class="drink-name">Cappuccino</div><div class="drink-price">&euro;2</div></div>
+  <div class="drink-item"><div class="drink-name">Liquori e Amari <span class="drink-en">&mdash; Liqueurs &amp; bitters</span></div><div class="drink-price">&euro;4</div></div>
+  <div class="drink-item"><div class="drink-name">Distillati <span class="drink-en">&mdash; Grappa, brandy, etc.</span></div><div class="drink-price">&euro;5–15</div></div>
+  <div class="drink-item"><div class="drink-name">Amari e Distillati VIP <span class="drink-en">&mdash; Premium spirits</span></div><div class="drink-price">&euro;5–20</div></div>
+</div>
+
+<div style="text-align:center; padding:1.5rem; color:var(--text-muted); font-family:'Inter',sans-serif; font-size:0.8rem; font-style:italic; border-top:1px solid var(--border); max-width:780px; margin:0 auto;">
+  Coperto (cover charge): &euro;2.50 per person<br>
+  "Il grande come il piccolo evento richiedono sempre la medesima dedizione." &mdash; Emanuele e Lino<br>
+  <em>"Great and small occasions alike always deserve the same dedication."</em>
+</div>
+
+<div class="footer">
+  La Cipolla d'Oro &middot; Ancona, Le Marche &middot; <a href="https://www.leggimenu.it/menu/cipolladoro">View original menu</a><br>
+  English descriptions for reference &mdash; ask your server about today's specials and seasonal availability<br>
+  4.7 out of 5 &mdash; 66 reviews
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SHARE BAR                                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="share-bar" id="shareBar">
+  <div class="count"><strong id="selCount">0</strong> items selected</div>
+  <button class="share-btn share-btn-copy" onclick="copyOrder()">
+    <span class="btn-icon">📋</span> Copy
+  </button>
+  <a class="share-btn share-btn-imessage" id="imsgLink" href="#">
+    <span class="btn-icon">💬</span> iMessage
+  </a>
+  <a class="share-btn share-btn-mail" id="mailLink" href="#">
+    <span class="btn-icon">✉️</span> Mail
+  </a>
+  <button class="share-btn share-btn-clear" onclick="clearAll()">Clear</button>
+</div>
+<div class="copied-toast" id="toast">Copied!</div>
+
+<script>
+(function() {
+  // Make items clickable for selection
+  const items = document.querySelectorAll('.menu-item, .wine-item, .drink-item');
+
+  items.forEach(el => {
+    el.addEventListener('click', function(e) {
+      // Don't toggle if clicking a link inside
+      if (e.target.closest('a')) return;
+      this.classList.toggle('selected');
+      updateShareBar();
+    });
+  });
+
+  function getSelectedItems() {
+    const selected = document.querySelectorAll('.selected');
+    const results = [];
+    selected.forEach(el => {
+      let it = '', en = '';
+      // menu-item style
+      const nameIt = el.querySelector('.item-name-it');
+      const nameEn = el.querySelector('.item-name-en');
+      const wineName = el.querySelector('.wine-name');
+      const drinkName = el.querySelector('.drink-name');
+      const drinkEn = el.querySelector('.drink-en');
+      const price = el.querySelector('.item-price, .wine-price, .drink-price');
+
+      if (nameIt) {
+        it = nameIt.textContent.replace(/Heather.s Pick/i, '').trim();
+        en = nameEn ? nameEn.textContent.trim() : '';
+      } else if (wineName) {
+        it = wineName.textContent.trim();
+        const wineRegion = el.querySelector('.wine-region');
+        en = wineRegion ? wineRegion.textContent.trim() : '';
+      } else if (drinkName) {
+        it = drinkName.childNodes[0].textContent.trim();
+        en = drinkEn ? drinkEn.textContent.replace(/^—\s*/, '').trim() : '';
+      }
+
+      let p = price ? price.textContent.trim() : '';
+      if (it) results.push({ it, en, price: p });
+    });
+    return results;
+  }
+
+  function buildText(items) {
+    let lines = ['Our order at La Cipolla d\'Oro 🍽️', ''];
+    items.forEach((item, i) => {
+      let line = `${i+1}. ${item.it}`;
+      if (item.en) line += ` — ${item.en}`;
+      if (item.price) line += ` (${item.price})`;
+      lines.push(line);
+    });
+    lines.push('');
+    lines.push('🇮🇹 Ancona, Le Marche');
+    return lines.join('\n');
+  }
+
+  window.updateShareBar = function() {
+    const items = getSelectedItems();
+    const bar = document.getElementById('shareBar');
+    const count = document.getElementById('selCount');
+    count.textContent = items.length;
+
+    if (items.length > 0) {
+      bar.classList.add('visible');
+      const text = buildText(items);
+      const encoded = encodeURIComponent(text);
+      document.getElementById('imsgLink').href = 'sms:&body=' + encoded;
+      document.getElementById('mailLink').href = 'mailto:?subject=' +
+        encodeURIComponent('Our order — La Cipolla d\'Oro') + '&body=' + encoded;
+    } else {
+      bar.classList.remove('visible');
+    }
+  };
+
+  window.copyOrder = function() {
+    const items = getSelectedItems();
+    const text = buildText(items);
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 1500);
+    }).catch(() => {
+      // Fallback
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 1500);
+    });
+  };
+
+  window.clearAll = function() {
+    document.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
+    updateShareBar();
+  };
+})();
+</script>
+
+</body>
+</html>
